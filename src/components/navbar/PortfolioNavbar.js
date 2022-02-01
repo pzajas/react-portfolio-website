@@ -10,6 +10,8 @@ const StyledNavbarContainer = styled.div`
   justify-content: space-between;
   align-items: center;
   padding: 0 2rem 0 2rem;
+
+  margin-bottom: 2rem;
 `
 
 const StyledLogoContainer = styled.div`
@@ -23,18 +25,20 @@ const StyledLogoContainer = styled.div`
 
 const StyledLinkContainer = styled.div`
   display: flex;
-  flex-direction: column;
+  /* flex-direction: column; */
   align-items: flex-end;
   gap: 0.8rem;
+  width: 6rem;
+  background-color: #181818;
   padding-right: 2rem;
-  position: absolute;
-  top: 4.5rem;
-  right: 0;
+  /* position: absolute;
+  top: 4rem;
+  right: 0; */
 `
 
 const StyledNavbarLink = styled(Link)`
   text-decoration: none;
-  color: red;
+  color: white;
   cursor: pointer;
 `
 
