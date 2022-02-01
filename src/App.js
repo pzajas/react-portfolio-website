@@ -5,8 +5,12 @@ import PortfolioAbout from "./pages/PortfolioAbout"
 
 import { Routes, Route } from "react-router"
 import styled from "styled-components"
+import PortfolioHero from "./components/hero/PortfolioHero"
 
 const StyledWebsiteContainer = styled.div`
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
 `
 
@@ -18,6 +22,7 @@ function App() {
         <Route path="projects" element={<PortfolioProjects />} />
         <Route path="about" element={<PortfolioAbout />} />
       </Routes>
+      <PortfolioHero />
     </StyledWebsiteContainer>
   )
 }
