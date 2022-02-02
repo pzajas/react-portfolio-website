@@ -11,8 +11,9 @@ const StyledHeroContainer = styled.div`
   padding: 0 2rem 0 2rem;
   gap: 0.1em;
   flex-direction: column;
-
   margin-bottom: 2rem;
+
+  opacity: ${props => (props.menuActive ? "0.4" : "1")};
 `
 const StyledHeroText = styled.div`
   & * {
@@ -40,9 +41,9 @@ const StyledHeroImage = styled.div`
 
 const StyledHeroButtonContainer = styled.div``
 
-const PortfolioHero = () => {
+const PortfolioHero = ({ menuActive }) => {
   return (
-    <StyledHeroContainer>
+    <StyledHeroContainer menuActive={menuActive}>
       <StyledHeroText>
         <h1>
           Hello there,<br></br> I design unique web experience!
@@ -55,7 +56,7 @@ const PortfolioHero = () => {
       </StyledHeroImage>
 
       <StyledHeroButtonContainer>
-        <PrimaryButton>See Projects</PrimaryButton>
+        <PrimaryButton buttonText="See my work" />
       </StyledHeroButtonContainer>
     </StyledHeroContainer>
   )
