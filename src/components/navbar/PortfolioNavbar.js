@@ -28,7 +28,7 @@ const StyledLinkContainer = styled.div`
   align-items: flex-end;
   padding: 0 2rem 0 2rem;
 
-  gap: 0.2rem;
+  gap: 0.3rem;
   background-color: #181818;
   position: absolute;
   right: 0;
@@ -39,25 +39,26 @@ const StyledLinkContainer = styled.div`
   z-index: 1000;
   transition: height 0.5s ease, opacity 0.5s ease;
   opacity: ${props => (props.menuActive ? "1" : "0")};
-  height: ${props => (props.menuActive ? "18%" : "0%")};
-
-  &::before {
-    width: 2rem;
-    height: 2rem;
-    background-color: red;
-    position: absolute;
-    z-index: 2222;
-  }
+  height: ${props => (props.menuActive ? "auto" : "0%")};
 `
 
 const StyledNavbarLink = styled(Link)`
+  text-align: right;
   text-decoration: none;
   color: white;
   border-bottom: 1px solid #181818;
+  padding-bottom: 0.5rem;
+
   cursor: pointer;
 
   &:hover {
+    width: 20%;
+    transition: all 0.5s ease-in-out;
     border-bottom: 1px solid orangered;
+  }
+
+  &:last-child {
+    padding-bottom: 1.5rem;
   }
 `
 
