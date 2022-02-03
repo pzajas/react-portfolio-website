@@ -1,10 +1,11 @@
+import * as palette from "../../variables/Variables"
 import { Link } from "react-router-dom"
 
 import styled from "styled-components"
 
 const StyledNavbarContainer = styled.div`
   height: 4rem;
-  background-color: #181818;
+  background-color: ${palette.PrimaryColor};
 
   display: flex;
   justify-content: space-between;
@@ -18,7 +19,7 @@ const StyledLogoContainer = styled.div`
   font-weight: 600;
 
   & span {
-    color: orangered;
+    color: ${palette.SecondaryColor};
   }
 `
 
@@ -29,24 +30,30 @@ const StyledLinkContainer = styled.div`
   padding: 0 2rem 0 2rem;
 
   gap: 0.3rem;
-  background-color: #181818;
+  background-color: ${palette.PrimaryColor};
   position: absolute;
   right: 0;
   top: 4rem;
 
   width: 100%;
-  border-bottom: 1px solid white;
+  border-bottom: 1px solid ${palette.TeriaryColor};
   z-index: 1000;
-  transition: height 0.5s ease, opacity 0.5s ease;
+  transition: height 0.5s ease, opacity 0.9s ease;
+
   opacity: ${props => (props.menuActive ? "1" : "0")};
-  height: ${props => (props.menuActive ? "auto" : "0%")};
+  height: ${props => (props.menuActive ? "20%" : "0%")};
+
+  & * {
+    transition: opacity 0.1s ease;
+    opacity: ${props => (props.menuActive ? "1" : "0")};
+  }
 `
 
 const StyledNavbarLink = styled(Link)`
   text-align: right;
   text-decoration: none;
-  color: white;
-  border-bottom: 1px solid #181818;
+  color: ${palette.TeriaryColor};
+  background-color: ${palette.PrimaryColor};
   padding-bottom: 0.5rem;
 
   cursor: pointer;
@@ -54,7 +61,7 @@ const StyledNavbarLink = styled(Link)`
   &:hover {
     width: 20%;
     transition: all 0.5s ease-in-out;
-    border-bottom: 1px solid orangered;
+    border-bottom: 1px solid ${palette.SecondaryColor};
   }
 
   &:last-child {
@@ -73,7 +80,7 @@ const StyledHamburgerContainer = styled.div`
   & * {
     width: 1.4rem;
     height: 2px;
-    background-color: white;
+    background-color: ${palette.TeriaryColor};
   }
 `
 
