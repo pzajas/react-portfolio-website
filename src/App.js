@@ -13,7 +13,7 @@ const StyledWebsiteContainer = styled.div`
   margin-right: 0;
   box-sizing: border-box;
 
-  &* {
+  & * {
     font-family: "Montserrat", sans-serif;
   }
 `
