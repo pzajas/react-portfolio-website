@@ -1,3 +1,4 @@
+import * as palette from "../../variables/Variables"
 import styled from "styled-components"
 
 const StyledPrimaryButton = styled.button`
@@ -7,12 +8,12 @@ const StyledPrimaryButton = styled.button`
   font-size: 0.75rem;
   padding-bottom: 0.5rem;
   margin-bottom: 0.5rem;
-  border-bottom: 1px solid #181818;
+  border-bottom: 1px solid ${palette.PrimaryColor};
 
   transition: all 0.5s ease-in-out;
 
   &:hover {
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid ${palette.TeriaryColor};
   }
 `
 

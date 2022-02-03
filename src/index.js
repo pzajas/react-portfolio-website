@@ -4,11 +4,18 @@ import "./index.css"
 import { BrowserRouter } from "react-router-dom"
 import App from "./App"
 import reportWebVitals from "./reportWebVitals"
+import styled from "styled-components"
+import * as palette from "./variables/Variables"
+const AppWrapper = styled.div`
+  background-color: ${palette.PrimaryColor};
+`
 
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
-      <App />
+      <AppWrapper>
+        <App />
+      </AppWrapper>
     </BrowserRouter>
   </React.StrictMode>,
   document.getElementById("root")

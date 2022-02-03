@@ -1,12 +1,13 @@
+import * as palette from "../../variables/Variables"
 import styled from "styled-components"
 
 import PrimaryButton from "../../elements/buttons/PrimaryButton"
 import hero from "../../assets/hero.png"
 
 const StyledHeroContainer = styled.div`
-  background-color: #181818;
+  background-color: ${palette.PrimaryColor};
   margin-top: 0;
-  color: white;
+  color: ${palette.TeriaryColor};
   display: flex;
   padding: 0 2rem 0 2rem;
   gap: 0.1em;
