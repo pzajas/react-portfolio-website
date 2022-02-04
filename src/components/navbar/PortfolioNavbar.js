@@ -1,17 +1,17 @@
-import * as palette from "../../variables/Variables"
+import * as style from "../../variables/Variables"
 import { Link } from "react-router-dom"
 
 import styled from "styled-components"
 
 const StyledNavbarContainer = styled.div`
   height: 4rem;
-  background-color: ${palette.PrimaryColor};
+  background-color: ${style.PrimaryColor};
 
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 2rem 0 2rem;
-  margin-bottom: 2rem;
+  margin-bottom: ${style.PrimaryMarginBottom};
 `
 
 const StyledLogoContainer = styled.div`
@@ -19,7 +19,7 @@ const StyledLogoContainer = styled.div`
   font-weight: 600;
 
   & span {
-    color: ${palette.SecondaryColor};
+    color: ${style.SecondaryColor};
   }
 `
 
@@ -30,18 +30,18 @@ const StyledLinkContainer = styled.div`
   padding: 0 2rem 0 2rem;
 
   gap: 0.3rem;
-  background-color: ${palette.PrimaryColor};
+  background-color: ${style.PrimaryColor};
   position: absolute;
   right: 0;
   top: 4rem;
 
   width: 100%;
-  border-bottom: 1px solid ${palette.TeriaryColor};
+  border-bottom: 1px solid ${style.TeriaryColor};
   z-index: 1000;
   transition: height 0.5s ease, opacity 0.9s ease;
 
   opacity: ${props => (props.menuActive ? "1" : "0")};
-  height: ${props => (props.menuActive ? "20%" : "0%")};
+  height: ${props => (props.menuActive ? "8rem" : "0%")};
 
   & * {
     transition: opacity 0.1s ease;
@@ -52,20 +52,16 @@ const StyledLinkContainer = styled.div`
 const StyledNavbarLink = styled(Link)`
   text-align: right;
   text-decoration: none;
-  color: ${palette.TeriaryColor};
-  background-color: ${palette.PrimaryColor};
-  padding-bottom: 0.5rem;
+  color: ${style.TeriaryColor};
+  background-color: ${style.PrimaryColor};
+  padding-bottom: 0.8rem;
 
   cursor: pointer;
 
   &:hover {
     width: 20%;
     transition: all 0.5s ease-in-out;
-    border-bottom: 1px solid ${palette.SecondaryColor};
-  }
-
-  &:last-child {
-    padding-bottom: 1.5rem;
+    border-bottom: 1px solid ${style.SecondaryColor};
   }
 `
 
@@ -80,7 +76,7 @@ const StyledHamburgerContainer = styled.div`
   & * {
     width: 1.4rem;
     height: 2px;
-    background-color: ${palette.TeriaryColor};
+    background-color: ${style.TeriaryColor};
   }
 `
 

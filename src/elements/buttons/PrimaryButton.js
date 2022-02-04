@@ -6,9 +6,8 @@ const StyledPrimaryButton = styled.button`
   border: none;
   color: orangered;
   font-size: 0.75rem;
-  padding-bottom: 0.5rem;
-  margin-bottom: 0.5rem;
   border-bottom: 1px solid ${palette.PrimaryColor};
+  height: auto;
 
   transition: all 0.5s ease-in-out;
 
