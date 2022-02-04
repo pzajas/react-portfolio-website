@@ -1,11 +1,13 @@
 import { useState } from "react"
-import PortfolioNavbar from "./components/navbar/PortfolioNavbar"
+import { Routes, Route } from "react-router"
 
+import PortfolioNavbar from "./components/navbar/PortfolioNavbar"
 import PortfolioHero from "./components/hero/PortfolioHero"
+import PortfolioOffer from "./components/offer/PortfolioOffer"
+
 import PortfolioProjects from "./pages/PortfolioProjects"
 import PortfolioAbout from "./pages/PortfolioAbout"
 
-import { Routes, Route } from "react-router"
 import styled from "styled-components"
 
 const StyledWebsiteContainer = styled.div`
@@ -29,6 +31,7 @@ function App() {
         <Route path="about" element={<PortfolioAbout />} />
       </Routes> */}
       <PortfolioHero menuActive={menuActive} />
+      <PortfolioOffer />
     </StyledWebsiteContainer>
   )
 }

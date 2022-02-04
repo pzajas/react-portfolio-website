@@ -29,6 +29,7 @@ const StyledHeroText = styled.div`
   & p {
     opacity: 0.7;
     margin-bottom: 2rem;
+    font-size: 1rem;
   }
 `
 const StyledHeroImage = styled.div`
