@@ -9,12 +9,16 @@ import { InfoSquare } from "@styled-icons/bootstrap/InfoSquare"
 const StyledOfferContainer = styled.div`
   display: flex;
   flex-direction: column;
+  height: 100vh;
   background-color: ${style.PrimaryColor};
   color: ${style.TeriaryColor};
   align-items: center;
   text-align: center;
   justify-content: center;
   margin-bottom: ${style.PrimaryMarginBottom};
+  padding: 1rem 0 1rem 0;
+
+  scroll-snap-align: start;
 `
 
 const PortfolioOffer = () => {

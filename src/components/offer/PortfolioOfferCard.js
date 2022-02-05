@@ -5,7 +5,7 @@ const StyledCardContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 1rem 0.5rem 0rem 0.5rem;
+  /* padding: 1rem 0.5rem 0rem 0.5rem; */
   width: 8rem;
 
   & * {

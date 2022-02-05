@@ -25,11 +25,12 @@ function App() {
 
   return (
     <StyledWebsiteContainer>
-      <PortfolioNavbar menuActive={menuActive} setMenuActive={setMenuActive} />
       {/* <Routes>
         <Route path="projects" element={<PortfolioProjects />} />
         <Route path="about" element={<PortfolioAbout />} />
       </Routes> */}
+      <PortfolioNavbar menuActive={menuActive} setMenuActive={setMenuActive} />
+
       <PortfolioHero menuActive={menuActive} />
       <PortfolioOffer />
       <PortfolioSkills />

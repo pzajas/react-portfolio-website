@@ -1,17 +1,20 @@
+import { ArrowRightShort } from "@styled-icons/bootstrap/ArrowRightShort"
+
 import * as palette from "../../variables/Variables"
 import styled from "styled-components"
 
 import PrimaryButton from "../../elements/buttons/PrimaryButton"
-import hero from "../../assets/hero.png"
 
 const StyledHeroContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 90vh;
   background-color: ${palette.PrimaryColor};
   margin-top: 0;
   color: ${palette.TeriaryColor};
-  display: flex;
   padding: 0 2rem 0 2rem;
   gap: 0.1em;
-  flex-direction: column;
   margin-bottom: 2rem;
 
   opacity: ${props => (props.menuActive ? "0.4" : "1")};
@@ -20,46 +23,35 @@ const StyledHeroText = styled.div`
   & * {
     margin-top: 0;
     align-items: center;
-    text-align: center;
+    /* text-align: center; */
   }
   & h1 {
+    letter-spacing: 0.05rem;
     font-size: 2rem;
     margin-bottom: 2rem;
   }
-  & p {
-    opacity: 0.7;
-    margin-bottom: 2rem;
-    font-size: 1rem;
-  }
 `
 
-const StyledHeroImage = styled.div`
-  align-items: center;
-  text-align: center;
-  margin-bottom: 2rem;
-  & img {
-    width: 70%;
-  }
+const StyledHeroButtonContainer = styled.div`
+  display: flex;
 `
 
-const StyledHeroButtonContainer = styled.div``
+const StyledArrowShort = styled(ArrowRightShort)`
+  padding: 0rem 0rem 0.5rem 0.3rem;
+  width: 1.3rem;
+`
 
 const PortfolioHero = ({ menuActive }) => {
   return (
     <StyledHeroContainer menuActive={menuActive}>
       <StyledHeroText>
         <h1>
-          Hello there,<br></br> I design unique web experience!
+          Hello there!<br></br> I design unique web experience.
         </h1>
-        <p>A passionate react developer from Poland</p>
       </StyledHeroText>
 
-      <StyledHeroImage>
-        <img src={hero} />
-      </StyledHeroImage>
-
       <StyledHeroButtonContainer>
-        <PrimaryButton buttonText="See my work" />
+        <PrimaryButton buttonText="See my work" /> <StyledArrowShort />
       </StyledHeroButtonContainer>
     </StyledHeroContainer>
   )
