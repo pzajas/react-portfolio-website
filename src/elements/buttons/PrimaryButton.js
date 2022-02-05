@@ -1,19 +1,19 @@
-import * as palette from "../../variables/Variables"
+import * as style from "../../variables/Variables"
 import styled from "styled-components"
 
 const StyledPrimaryButton = styled.p`
   background: none;
   border: none;
-  color: orangered;
+  color: ${style.SecondaryColor};
   font-size: 1rem;
-  border-bottom: 1px solid ${palette.PrimaryColor};
+  border-bottom: 1px solid ${style.PrimaryColor};
   height: auto;
 
   transition: all 0.5s ease-in-out;
   padding-bottom: 0.5rem;
 
   &:hover {
-    border-bottom: 1px solid ${palette.TeriaryColor};
+    border-bottom: 1px solid ${style.TeriaryColor};
     letter-spacing: 0.05rem;
   }
 `
