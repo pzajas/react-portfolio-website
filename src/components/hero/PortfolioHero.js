@@ -32,6 +32,7 @@ const StyledHeroText = styled.div`
     font-size: 1rem;
   }
 `
+
 const StyledHeroImage = styled.div`
   align-items: center;
   text-align: center;

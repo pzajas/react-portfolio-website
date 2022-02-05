@@ -4,7 +4,7 @@ import { Routes, Route } from "react-router"
 import PortfolioNavbar from "./components/navbar/PortfolioNavbar"
 import PortfolioHero from "./components/hero/PortfolioHero"
 import PortfolioOffer from "./components/offer/PortfolioOffer"
-
+import PortfolioSkills from "./components/PortfolioSkills/PortfolioSkills"
 import PortfolioProjects from "./pages/PortfolioProjects"
 import PortfolioAbout from "./pages/PortfolioAbout"
 
@@ -32,6 +32,7 @@ function App() {
       </Routes> */}
       <PortfolioHero menuActive={menuActive} />
       <PortfolioOffer />
+      <PortfolioSkills />
     </StyledWebsiteContainer>
   )
 }

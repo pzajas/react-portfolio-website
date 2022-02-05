@@ -35,11 +35,6 @@ const PortfolioOffer = () => {
         title="Clever Ideas"
         paragraph="This is just a placeholder text for the litol card here."
       />
-      <PortfolioOfferCard
-        icon={<InfoSquare />}
-        title="Clever Ideas"
-        paragraph="This is just a placeholder text for the litol card here."
-      />
     </StyledOfferContainer>
   )
 }
