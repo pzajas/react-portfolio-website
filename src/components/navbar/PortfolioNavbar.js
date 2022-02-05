@@ -4,14 +4,13 @@ import { Link } from "react-router-dom"
 import styled from "styled-components"
 
 const StyledNavbarContainer = styled.div`
-  height: 4rem;
+  height: 10vh;
   background-color: ${style.PrimaryColor};
-
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 2rem 0 2rem;
-  margin-bottom: ${style.PrimaryMarginBottom};
+  scroll-snap-align: start;
 `
 
 const StyledLogoContainer = styled.div`
