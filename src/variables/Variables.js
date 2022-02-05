@@ -1,7 +1,7 @@
 // COLORS
 
 export const PrimaryColor = "#181818"
-export const SecondaryColor = "orangered"
+export const SecondaryColor = "#f54f1b"
 export const TeriaryColor = "white"
 
 // POSITIONING
