@@ -1,7 +1,7 @@
 import * as style from "../../variables/Variables"
 import styled from "styled-components"
 
-const StyledPrimaryButton = styled.p`
+const StyledPrimaryButtonContainer = styled.p`
   background: none;
   border: none;
   color: ${style.SecondaryColor};
@@ -19,7 +19,7 @@ const StyledPrimaryButton = styled.p`
 `
 
 const PrimaryButton = ({ buttonText }) => {
-  return <StyledPrimaryButton>{buttonText}</StyledPrimaryButton>
+  return <StyledPrimaryButtonContainer>{buttonText}</StyledPrimaryButtonContainer>
 }
 
 export default PrimaryButton

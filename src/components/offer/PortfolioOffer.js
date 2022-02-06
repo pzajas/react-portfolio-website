@@ -44,14 +44,14 @@ const PortfolioOffer = () => {
     {
       icon: <SlashSquare />,
       title: "Responsive",
-      paragraph: "Adjusted and pixel perfect for every device.",
+      paragraph: "Pixel perfect and adjusted for every device.",
     },
   ]
   return (
     <StyledOfferContainer>
       <StyledSectionTitle primarySectionText="What can I offer ?"></StyledSectionTitle>
       {portfolioOffersArray.map(({ icon, title, paragraph }) => (
-        <PortfolioOfferCard icon={icon} title={title} paragraph={paragraph} />
+        <PortfolioOfferCard key={title} icon={icon} title={title} paragraph={paragraph} />
       ))}
     </StyledOfferContainer>
   )
