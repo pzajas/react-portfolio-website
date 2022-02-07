@@ -1,10 +1,7 @@
-import { useState } from "react"
 import styled from "styled-components"
 import * as style from "../../variables/Variables"
 
-const StyledProgressBarContainer = styled.div``
-
-const StyledListContainer = styled.div`
+const StyledChartContainer = styled.div`
   display: flex;
   align-items: center;
   margin-bottom: 0.2rem;
@@ -14,7 +11,6 @@ const StyledListContainer = styled.div`
     display: flex;
     height: 1.5rem;
     list-style: none;
-    color: black;
 
     background-color: rgba(255, 255, 255, 0.05);
   }
@@ -25,13 +21,11 @@ const StyledLabel = styled.div`
   color: ${style.PrimaryColor};
   font-size: 0.8rem;
   text-transform: capitalize;
-  min-width: 5rem;
   height: 1.5rem;
-  min-width: 25%;
+  min-width: 6rem;
   color: black;
   display: flex;
   align-items: center;
-  background: white;
   padding-left: 0.4rem;
   padding-right: 0.4rem;
 `
@@ -52,26 +46,19 @@ const StyledDiv = styled.div`
   }
 `
 
-const ProgressBar = () => {
-  const portfolioSkillsArray = [
-    { language: "html", percent: "50%" },
-    { language: "css", percent: "70%" },
-    { language: "javascript", percent: "40%" },
-    { language: "react", percent: "60%" },
-  ]
-
+const PortfolioSkillsChart = ({ techFilteredArray }) => {
   return (
-    <StyledProgressBarContainer>
-      {portfolioSkillsArray.map(skill => (
-        <StyledListContainer key={skill.percent}>
-          <StyledLabel>{skill.language}</StyledLabel>
+    <div>
+      {techFilteredArray.map(skill => (
+        <StyledChartContainer key={skill.label}>
+          <StyledLabel>{skill.label}</StyledLabel>
           <li>
             <StyledDiv percent={skill.percent}></StyledDiv>
           </li>
-        </StyledListContainer>
+        </StyledChartContainer>
       ))}
-    </StyledProgressBarContainer>
+    </div>
   )
 }
 
-export default ProgressBar
+export default PortfolioSkillsChart

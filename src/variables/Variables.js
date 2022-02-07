@@ -1,7 +1,7 @@
 // COLORS
 
 export const PrimaryColor = "#181818"
-export const SecondaryColor = "#e87c2a"
+export const SecondaryColor = "#ff5b2e"
 export const TeriaryColor = "white"
 
 // POSITIONING
