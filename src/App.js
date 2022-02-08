@@ -5,8 +5,9 @@ import PortfolioNavbar from "./components/navbar/PortfolioNavbar"
 import PortfolioHero from "./components/hero/PortfolioHero"
 import PortfolioOffer from "./components/offer/PortfolioOffer"
 import PortfolioSkills from "./components/PortfolioSkills/PortfolioSkills"
+import PortfolioAbout from "./components/about/PortfolioAbout"
 import PortfolioProjects from "./pages/PortfolioProjects"
-import PortfolioAbout from "./pages/PortfolioAbout"
+// import PortfolioAbout from "./pages/PortfolioAbout"
 
 import styled from "styled-components"
 
@@ -30,10 +31,10 @@ function App() {
         <Route path="about" element={<PortfolioAbout />} />
       </Routes> */}
       <PortfolioNavbar menuActive={menuActive} setMenuActive={setMenuActive} />
-
       <PortfolioHero menuActive={menuActive} />
       <PortfolioOffer />
       <PortfolioSkills />
+      <PortfolioAbout />
     </StyledWebsiteContainer>
   )
 }

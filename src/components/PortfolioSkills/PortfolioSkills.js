@@ -19,7 +19,7 @@ const PortfolioSkills = () => {
     { label: "styled-com", type: "library", percent: "80%" },
     { label: "redux", type: "library", percent: "30%" },
     { label: "react-select", type: "library", percent: "70%" },
-    { label: "axios", type: "library", percent: "90%" },
+    { label: "axios", type: "library", percent: "100%" },
     { label: "react-router", type: "library", percent: "80%" },
     { label: "git", type: "utility", percent: "75%" },
     { label: "github", type: "utility", percent: "40%" },
@@ -31,11 +31,14 @@ const PortfolioSkills = () => {
 
   return (
     <StyledSkillsContainer>
-      <StyledSectionTitle primarySectionText="Currently I know..." />
+      <StyledSectionTitle primarySectionText="I know some stuff ! " />
+
       <StyledSecondaryTitle secondarySectionText="Worked with those techs." />
       <PortfolioSkillsChart techFilteredArray={portfolioArrayLanguageFiltered} />
+
       <StyledSecondaryTitle secondarySectionText="Was introduced to libraries." />
       <PortfolioSkillsChart techFilteredArray={portfolioArrayTechFiltered} />
+
       <StyledSecondaryTitle secondarySectionText="And and also other things!" />
       <PortfolioSkillsChart techFilteredArray={portfolioArrayUtilityFiltered} />
     </StyledSkillsContainer>

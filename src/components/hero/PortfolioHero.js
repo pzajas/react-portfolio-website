@@ -1,6 +1,6 @@
 import { ArrowRightShort } from "@styled-icons/bootstrap/ArrowRightShort"
 
-import * as palette from "../../variables/Variables"
+import * as style from "../../variables/Variables"
 import styled from "styled-components"
 
 import PrimaryButton from "../../elements/buttons/PrimaryButton"
@@ -10,9 +10,9 @@ const StyledHeroContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   height: 90vh;
-  background-color: ${palette.PrimaryColor};
+  background-color: ${style.PrimaryColor};
   margin-top: 0;
-  color: ${palette.TeriaryColor};
+  color: ${style.TeriaryColor};
   padding: 0 2rem 0 2rem;
   gap: 0.1em;
   margin-bottom: 2rem;
@@ -23,12 +23,15 @@ const StyledHeroText = styled.div`
   & * {
     margin-top: 0;
     align-items: center;
-    /* text-align: center; */
   }
   & h1 {
     letter-spacing: 0.05rem;
     font-size: 2rem;
     margin-bottom: 2rem;
+  }
+
+  & span {
+    color: ${style.SecondaryColor};
   }
 `
 
@@ -46,7 +49,7 @@ const PortfolioHero = ({ menuActive }) => {
     <StyledHeroContainer menuActive={menuActive}>
       <StyledHeroText>
         <h1>
-          Hello there!<br></br> I design unique web experience.
+          Hello there!<br></br> I design <span>unique</span> web experience.
         </h1>
       </StyledHeroText>
 
