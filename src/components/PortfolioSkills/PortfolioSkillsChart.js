@@ -22,12 +22,12 @@ const StyledLabel = styled.div`
   font-size: 0.8rem;
   text-transform: capitalize;
   height: 1.5rem;
-  min-width: 6rem;
+  min-width: 5.4rem;
   color: black;
   display: flex;
   align-items: center;
   padding-left: 0.4rem;
-  padding-right: 0.4rem;
+  padding-right: 0.2rem;
 `
 
 const StyledDiv = styled.div`
