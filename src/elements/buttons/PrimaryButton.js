@@ -15,11 +15,12 @@ const StyledPrimaryButtonContainer = styled.p`
   &:hover {
     border-bottom: 1px solid ${style.TeriaryColor};
     letter-spacing: 0.05rem;
+    cursor: pointer;
   }
 `
 
-const PrimaryButton = ({ buttonText }) => {
-  return <StyledPrimaryButtonContainer>{buttonText}</StyledPrimaryButtonContainer>
+const PrimaryButton = ({ buttonText, handleScrollToProjects }) => {
+  return <StyledPrimaryButtonContainer onClick={handleScrollToProjects}>{buttonText}</StyledPrimaryButtonContainer>
 }
 
 export default PrimaryButton
