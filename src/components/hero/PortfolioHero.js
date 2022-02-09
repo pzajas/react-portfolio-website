@@ -44,7 +44,7 @@ const StyledArrowShort = styled(ArrowRightShort)`
   width: 1.3rem;
 `
 
-const PortfolioHero = ({ menuActive }) => {
+const PortfolioHero = ({ menuActive, handleScrollToProjects }) => {
   return (
     <StyledHeroContainer menuActive={menuActive}>
       <StyledHeroText>
@@ -54,7 +54,7 @@ const PortfolioHero = ({ menuActive }) => {
       </StyledHeroText>
 
       <StyledHeroButtonContainer>
-        <PrimaryButton buttonText="See my work" /> <StyledArrowShort />
+        <PrimaryButton buttonText="See my work" handleScrollToProjects={handleScrollToProjects} /> <StyledArrowShort />
       </StyledHeroButtonContainer>
     </StyledHeroContainer>
   )

@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState, useRef } from "react"
 import { Routes, Route } from "react-router"
 
 import PortfolioNavbar from "./components/navbar/PortfolioNavbar"
@@ -6,8 +6,7 @@ import PortfolioHero from "./components/hero/PortfolioHero"
 import PortfolioOffer from "./components/offer/PortfolioOffer"
 import PortfolioSkills from "./components/PortfolioSkills/PortfolioSkills"
 import PortfolioAbout from "./components/about/PortfolioAbout"
-import PortfolioProjects from "./pages/PortfolioProjects"
-// import PortfolioAbout from "./pages/PortfolioAbout"
+import PortfolioProjects from "./components/projects/PortfolioProjects"
 
 import styled from "styled-components"
 
@@ -24,6 +23,10 @@ const StyledWebsiteContainer = styled.div`
 function App() {
   const [menuActive, setMenuActive] = useState(false)
 
+  const myRef = useRef(null)
+
+  const handleScrollToProjects = () => myRef.current.scrollIntoView()
+
   return (
     <StyledWebsiteContainer>
       {/* <Routes>
@@ -31,10 +34,11 @@ function App() {
         <Route path="about" element={<PortfolioAbout />} />
       </Routes> */}
       <PortfolioNavbar menuActive={menuActive} setMenuActive={setMenuActive} />
-      <PortfolioHero menuActive={menuActive} />
+      <PortfolioHero menuActive={menuActive} handleScrollToProjects={handleScrollToProjects} />
       <PortfolioOffer />
       <PortfolioSkills />
       <PortfolioAbout />
+      <PortfolioProjects myRef={myRef} />
     </StyledWebsiteContainer>
   )
 }
