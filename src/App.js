@@ -1,13 +1,12 @@
-import { useState, useRef } from "react"
-import { Routes, Route } from "react-router"
+import { Route, Routes } from "react-router"
+import { useRef, useState } from "react"
 
-import PortfolioNavbar from "./components/navbar/PortfolioNavbar"
-import PortfolioHero from "./components/hero/PortfolioHero"
-import PortfolioOffer from "./components/offer/PortfolioOffer"
-import PortfolioSkills from "./components/PortfolioSkills/PortfolioSkills"
 import PortfolioAbout from "./components/about/PortfolioAbout"
+import PortfolioHero from "./components/hero/PortfolioHero"
+import PortfolioNavbar from "./components/navbar/PortfolioNavbar"
+import PortfolioOffer from "./components/offer/PortfolioOffer"
 import PortfolioProjects from "./components/projects/PortfolioProjects"
-
+import PortfolioSkills from "./components/PortfolioSkills/PortfolioSkills"
 import styled from "styled-components"
 
 const StyledWebsiteContainer = styled.div`

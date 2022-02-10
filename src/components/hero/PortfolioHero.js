@@ -1,9 +1,8 @@
-import { ArrowRightShort } from "@styled-icons/bootstrap/ArrowRightShort"
-
 import * as style from "../../variables/Variables"
-import styled from "styled-components"
 
+import { ArrowRightShort } from "@styled-icons/bootstrap/ArrowRightShort"
 import PrimaryButton from "../../elements/buttons/PrimaryButton"
+import styled from "styled-components"
 
 const StyledHeroContainer = styled.div`
   display: flex;
@@ -54,7 +53,7 @@ const PortfolioHero = ({ menuActive, handleScrollToProjects }) => {
       </StyledHeroText>
 
       <StyledHeroButtonContainer>
-        <PrimaryButton buttonText="See my work" handleScrollToProjects={handleScrollToProjects} /> <StyledArrowShort />
+        <PrimaryButton buttonText="See my work" primaryButtonClick={handleScrollToProjects} /> <StyledArrowShort />
       </StyledHeroButtonContainer>
     </StyledHeroContainer>
   )
