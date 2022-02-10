@@ -19,8 +19,8 @@ const StyledPrimaryButtonContainer = styled.p`
   }
 `
 
-const PrimaryButton = ({ buttonText, handleScrollToProjects }) => {
-  return <StyledPrimaryButtonContainer onClick={handleScrollToProjects}>{buttonText}</StyledPrimaryButtonContainer>
+const PrimaryButton = ({ buttonText, primaryButtonClick }) => {
+  return <StyledPrimaryButtonContainer onClick={primaryButtonClick}>{buttonText}</StyledPrimaryButtonContainer>
 }
 
 export default PrimaryButton
