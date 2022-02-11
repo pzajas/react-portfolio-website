@@ -1,7 +1,6 @@
-import * as style from "../../variables/Variables"
 import { Link } from "react-router-dom"
-
 import styled from "styled-components"
+import * as style from "../../variables/Variables"
 
 const StyledNavbarContainer = styled.div`
   height: 10vh;
@@ -79,12 +78,12 @@ const StyledHamburgerContainer = styled.div`
   }
 `
 
-const PortfolioNavbar = ({ menuActive, setMenuActive }) => {
+const PortfolioNavbar = ({ menuActive, setMenuActive, className }) => {
   const handleToggleMenu = () => {
     setMenuActive(!menuActive)
   }
   return (
-    <StyledNavbarContainer>
+    <StyledNavbarContainer className={className}>
       <StyledLogoContainer>
         <StyledNavbarLink to="/">
           LO<span>GO</span>

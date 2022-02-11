@@ -1,8 +1,7 @@
-import * as style from "../../variables/Variables"
-
+import styled from "styled-components"
 import { ArrowRightShort } from "@styled-icons/bootstrap/ArrowRightShort"
 import PrimaryButton from "../../elements/buttons/PrimaryButton"
-import styled from "styled-components"
+import * as style from "../../variables/Variables"
 
 const StyledHeroContainer = styled.div`
   display: flex;
@@ -43,9 +42,9 @@ const StyledArrowShort = styled(ArrowRightShort)`
   width: 1.3rem;
 `
 
-const PortfolioHero = ({ menuActive, handleScrollToProjects }) => {
+const PortfolioHero = ({ menuActive, handleScrollToProjects, className }) => {
   return (
-    <StyledHeroContainer menuActive={menuActive}>
+    <StyledHeroContainer menuActive={menuActive} className={className}>
       <StyledHeroText>
         <h1>
           Hello there!<br></br> I design <span>unique</span> web experience.
