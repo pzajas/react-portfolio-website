@@ -1,13 +1,14 @@
+import styled from "styled-components"
 import StyledSectionTitle from "../../elements/titles/PrimaryTitle"
 import StyledSecondaryTitle from "../../elements/titles/SecondaryTitle"
-import styled from "styled-components"
-
+import * as style from "../../variables/Variables"
 import PortfolioSkillsChart from "./PortfolioSkillsChart"
 
 const StyledSkillsContainer = styled.div`
   height: 100vh;
   padding: 1rem 2rem 1rem 2rem;
   scroll-snap-align: start;
+  background-color: ${style.PrimaryColor};
 `
 
 const PortfolioSkills = () => {
@@ -21,6 +22,8 @@ const PortfolioSkills = () => {
     { label: "react-select", type: "library", percent: "70%" },
     { label: "axios", type: "library", percent: "100%" },
     { label: "react-router", type: "library", percent: "80%" },
+    { label: "transitions", type: "library", percent: "70%" },
+    { label: "swiper", type: "library", percent: "50%" },
     { label: "git", type: "utility", percent: "75%" },
     { label: "github", type: "utility", percent: "40%" },
   ]

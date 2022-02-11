@@ -1,18 +1,16 @@
 import * as style from "../../variables/Variables"
-import styled from "styled-components"
-
-import PortfolioOfferCard from "./PortfolioOfferCard"
-import StyledSectionTitle from "../../elements/titles/PrimaryTitle"
 
 import { CodeSquare } from "@styled-icons/bootstrap/CodeSquare"
 import { FilterSquare } from "@styled-icons/bootstrap/FilterSquare"
 import { PlusSquare } from "@styled-icons/bootstrap/PlusSquare"
+import PortfolioOfferCard from "./PortfolioOfferCard"
 import { SlashSquare } from "@styled-icons/bootstrap/SlashSquare"
+import StyledSectionTitle from "../../elements/titles/PrimaryTitle"
+import styled from "styled-components"
 
 const StyledOfferContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
-  gap: 0rem;
   height: 100vh;
   background-color: ${style.PrimaryColor};
   color: ${style.TeriaryColor};
