@@ -4,6 +4,8 @@ import { CSSTransition, TransitionGroup } from "react-transition-group"
 import styled from "styled-components"
 import PortfolioSkills from "./components/PortfolioSkills/PortfolioSkills"
 import PortfolioAbout from "./components/about/PortfolioAbout"
+import PortfolioContact from "./components/contact/PortfolioContact"
+import PortfolioFooter from "./components/footer/PortfolioFooter"
 import PortfolioHero from "./components/hero/PortfolioHero"
 import PortfolioNavbar from "./components/navbar/PortfolioNavbar"
 import PortfolioOffer from "./components/offer/PortfolioOffer"
@@ -46,7 +48,7 @@ const StyledPortfolioNavbar = styled(PortfolioNavbar)`
   }
 `
 const StyledPortfolioHero = styled(PortfolioHero)`
-  transition: all 2s linear;
+  transition: all 1s linear;
   &.hero-appear {
     opacity: 0;
   }
@@ -78,6 +80,8 @@ function App() {
     { name: <PortfolioSkills /> },
     { name: <PortfolioAbout /> },
     { name: <PortfolioProjects myRef={myRef} /> },
+    { name: <PortfolioContact /> },
+    { name: <PortfolioFooter /> },
   ]
 
   return (

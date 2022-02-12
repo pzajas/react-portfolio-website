@@ -75,6 +75,7 @@ const StyledHamburgerContainer = styled.div`
     width: 1.4rem;
     height: 2px;
     background-color: ${style.TeriaryColor};
+    pointer-events: ${props => (props.menuActive ? "none" : "auto")};
   }
 `
 

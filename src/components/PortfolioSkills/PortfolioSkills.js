@@ -19,7 +19,6 @@ const PortfolioSkills = () => {
     { label: "react", type: "language", percent: "60%" },
     { label: "styled-com", type: "library", percent: "80%" },
     { label: "redux", type: "library", percent: "30%" },
-    { label: "react-select", type: "library", percent: "70%" },
     { label: "axios", type: "library", percent: "100%" },
     { label: "react-router", type: "library", percent: "80%" },
     { label: "transitions", type: "library", percent: "70%" },

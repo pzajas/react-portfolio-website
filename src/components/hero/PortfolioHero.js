@@ -35,6 +35,19 @@ const StyledHeroText = styled.div`
 
 const StyledHeroButtonContainer = styled.div`
   display: flex;
+  opacity: 0;
+  animation-delay: 3s;
+  animation: slideInFromLeft 1s 1.5s forwards;
+
+  @keyframes slideInFromLeft {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
 `
 
 const StyledArrowShort = styled(ArrowRightShort)`
