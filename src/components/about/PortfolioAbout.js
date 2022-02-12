@@ -1,12 +1,11 @@
-import * as style from "../../variables/Variables"
-import StyledSectionTitle from "../../elements/titles/PrimaryTitle"
 import styled from "styled-components"
+import StyledSectionTitle from "../../elements/titles/PrimaryTitle"
+import * as style from "../../variables/Variables"
 
 const StyledAboutContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: left;
-  gap: 0rem;
   height: 100vh;
   background-color: ${style.PrimaryColor};
   color: ${style.TeriaryColor};

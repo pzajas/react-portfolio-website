@@ -1,12 +1,11 @@
-import * as style from "../../variables/Variables"
-
+import styled from "styled-components"
 import { CodeSquare } from "@styled-icons/bootstrap/CodeSquare"
 import { FilterSquare } from "@styled-icons/bootstrap/FilterSquare"
 import { PlusSquare } from "@styled-icons/bootstrap/PlusSquare"
-import PortfolioOfferCard from "./PortfolioOfferCard"
 import { SlashSquare } from "@styled-icons/bootstrap/SlashSquare"
 import StyledSectionTitle from "../../elements/titles/PrimaryTitle"
-import styled from "styled-components"
+import * as style from "../../variables/Variables"
+import PortfolioOfferCard from "./PortfolioOfferCard"
 
 const StyledOfferContainer = styled.div`
   display: flex;
