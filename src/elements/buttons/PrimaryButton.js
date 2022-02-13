@@ -1,5 +1,5 @@
-import * as style from "../../variables/Variables"
 import styled from "styled-components"
+import * as style from "../../variables/Variables"
 
 const StyledPrimaryButtonContainer = styled.p`
   background: none;

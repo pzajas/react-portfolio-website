@@ -65,6 +65,7 @@ function App() {
   const [splashActive, setSplashActive] = useState(true)
 
   const myRef = useRef(null)
+  const toTheTop = useRef(null)
 
   useEffect(() => {
     setTimeout(() => {
@@ -72,16 +73,27 @@ function App() {
     }, 2000)
   }, [])
 
-  const handleScrollToProjects = () => myRef.current.scrollIntoView()
+  const handleScrollToProjects = () => {
+    myRef.current.scrollIntoView()
+  }
+
+  const handleScrollToTheTop = () => {
+    toTheTop.current.scrollIntoView()
+  }
+
   const componentsArray = [
-    { name: <StyledPortfolioNavbar menuActive={menuActive} setMenuActive={setMenuActive} /> },
-    { name: <StyledPortfolioHero menuActive={menuActive} handleScrollToProjects={handleScrollToProjects} /> },
+    { name: <StyledPortfolioNavbar toTheTop={toTheTop} menuActive={menuActive} setMenuActive={setMenuActive} /> },
+    {
+      name: <StyledPortfolioHero menuActive={menuActive} handleScrollToProjects={handleScrollToProjects} />,
+    },
     { name: <PortfolioOffer /> },
     { name: <PortfolioSkills /> },
     { name: <PortfolioAbout /> },
     { name: <PortfolioProjects myRef={myRef} /> },
     { name: <PortfolioContact /> },
-    { name: <PortfolioFooter /> },
+    {
+      name: <PortfolioFooter handleScrollToTheTop={handleScrollToTheTop} />,
+    },
   ]
 
   return (
