@@ -2,11 +2,10 @@ import styled from "styled-components"
 import * as style from "../../variables/Variables"
 
 const PortfolioContactContainer = styled.div`
-  height: 80vh;
+  height: 75vh;
   padding: 0rem 2rem 0rem 2rem;
   scroll-snap-align: start;
-  background-color: green;
-  /* background-color: ${style.PrimaryColor}; */
+  background-color: ${style.PrimaryColor};
   color: ${style.TeriaryColor};
 `
 

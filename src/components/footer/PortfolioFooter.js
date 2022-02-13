@@ -2,43 +2,70 @@ import styled from "styled-components"
 import { Facebook } from "@styled-icons/boxicons-logos/Facebook"
 import { Github } from "@styled-icons/boxicons-logos/Github"
 import { Linkedin } from "@styled-icons/boxicons-logos/Linkedin"
+import SecondaryButton from "../../elements/buttons/SecondaryButton"
 import * as style from "../../variables/Variables"
 
 const StyledPortfolioFooter = styled.div`
-  height: 20vh;
+  height: 25vh;
   color: white;
-
   padding: 0 2rem 0 2rem;
 
-  div {
-    height: 100%;
-    display: flex;
-    align-items: center;
-    place-content: center;
-  }
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+`
+
+const StyledSecondaryButtonContainer = styled(SecondaryButton)`
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  top: -1.6rem;
+  cursor: pointer;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 2.5rem;
+`
+
+const StyledIconsContainer = styled.div`
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100%;
 
   li {
     list-style: none;
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
     & * {
-      width: 1.2rem;
+      width: 1.5rem;
       padding: 0.7rem;
-      margin-right: 0.8rem;
+      margin: 4px;
       background-color: rgba(255, 255, 255, 0.05);
       color: ${style.TeriaryColor};
     }
   }
 `
 
-const PortfolioFooter = () => {
+const PortfolioFooter = ({ handleScrollToTheTop }) => {
   const iconsArray = [{ icon: <Facebook /> }, { icon: <Linkedin /> }, { icon: <Github /> }, { icon: <Linkedin /> }]
 
   return (
     <StyledPortfolioFooter>
-      <div>
+      <StyledSecondaryButtonContainer secondaryButtonClick={handleScrollToTheTop}>
+        <SecondaryButton />
+      </StyledSecondaryButtonContainer>
+      <StyledIconsContainer>
         {iconsArray.map(icon => (
-          <li>{icon.icon}</li>
+          <li key={icon.icon}>{icon.icon}</li>
         ))}
-      </div>
+      </StyledIconsContainer>
     </StyledPortfolioFooter>
   )
 }

@@ -79,12 +79,12 @@ const StyledHamburgerContainer = styled.div`
   }
 `
 
-const PortfolioNavbar = ({ menuActive, setMenuActive, className }) => {
+const PortfolioNavbar = ({ menuActive, setMenuActive, className, toTheTop }) => {
   const handleToggleMenu = () => {
     setMenuActive(!menuActive)
   }
   return (
-    <StyledNavbarContainer className={className}>
+    <StyledNavbarContainer ref={toTheTop} className={className}>
       <StyledLogoContainer>
         <StyledNavbarLink to="/">
           LO<span>GO</span>
