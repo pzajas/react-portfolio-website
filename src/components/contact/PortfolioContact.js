@@ -1,5 +1,6 @@
 import styled from "styled-components"
 import * as style from "../../variables/Variables"
+import PortfolioForm from "./form/PortfolioForm"
 
 const PortfolioContactContainer = styled.div`
   height: 75vh;
@@ -10,7 +11,11 @@ const PortfolioContactContainer = styled.div`
 `
 
 const PortfolioContact = ({ className }) => {
-  return <PortfolioContactContainer className={className}></PortfolioContactContainer>
+  return (
+    <PortfolioContactContainer className={className}>
+      <PortfolioForm />
+    </PortfolioContactContainer>
+  )
 }
 
 export default PortfolioContact

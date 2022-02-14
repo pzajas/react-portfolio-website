@@ -46,7 +46,7 @@ const StyledIconsContainer = styled.div`
     & * {
       width: 1.5rem;
       padding: 0.7rem;
-      margin: 4px;
+      margin: 0rem 0.7rem;
       background-color: rgba(255, 255, 255, 0.05);
       color: ${style.TeriaryColor};
     }
