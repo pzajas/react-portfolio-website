@@ -17,8 +17,9 @@ const StyledPortfolioFormInputContainer = styled.div`
 
 const StyledPortfolioField = styled(Field)`
   &:-webkit-autofill {
-    transition: background-color 5000s;
+    transition: background-color 90000000s;
     -webkit-text-fill-color: white;
+    /* -webkit-box-shadow: 0 0 0px 1000px #181818 inset; */
   }
 
   color: white;
