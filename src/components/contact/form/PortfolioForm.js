@@ -3,7 +3,6 @@ import styled from "styled-components"
 import * as Yup from "yup"
 import * as style from "../../../variables/Variables"
 import PortfolioFormControl from "./PortfolioFormControl"
-import PortfolioFormError from "./PortfolioFormError"
 import PrimaryButton from "../../../elements/buttons/PrimaryButton"
 
 const StyledFormContainer = styled(Form)`
@@ -16,7 +15,7 @@ const StyledFormContainer = styled(Form)`
     flex-direction: column;
     border: none;
     /* background-color: steelblue; */
-    background-color: rgba(255, 255, 255, 0.005);
+    background-color: rgba(255, 255, 255, 0.01);
     font-size: 0.9rem;
     color: white;
   }
@@ -31,16 +30,17 @@ const Line = styled.div`
   height: 1px;
   background-color: rgba(255, 255, 255, 0.7);
   margin: 0rem 0rem 1rem 0rem;
+  opacity: 0.1;
 `
 
 const StyledPortfolioFormControlInput = styled(PortfolioFormControl)`
-  padding: 0.6rem 0rem 0.6rem 0.3rem;
+  padding: 0.6rem 0rem 0.6rem 0.2rem;
   background-color: transparent;
 `
 
 const StyledPortfolioFormControlArea = styled(PortfolioFormControl)`
   height: 10rem;
-  padding: 0.6rem 0rem 0.6rem 0.3rem;
+  padding: 0.6rem 0rem 0.6rem 0.2rem;
   resize: none;
 `
 
