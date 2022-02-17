@@ -18,13 +18,12 @@ const StyledSecondaryButtonContainer = styled(SecondaryButton)`
   position: absolute;
   display: flex;
   justify-content: center;
-  top: -1.6rem;
+  top: -1rem;
   cursor: pointer;
   left: 0;
   right: 0;
   margin-left: auto;
   margin-right: auto;
-  width: 2.5rem;
 `
 
 const StyledIconsContainer = styled.div`
