@@ -9,6 +9,7 @@ import img3 from "../../assets/img3.jpg"
 import img5 from "../../assets/img5.png"
 import StyledPrimarySectionTitle from "../../elements/titles/PrimaryTitle"
 import StyledSecondarySectionTitle from "../../elements/titles/SecondaryTitle"
+import PortfolioSkills from "../skills/PortfolioSkills"
 import * as style from "../../variables/Variables"
 
 const StyledProjectsContainer = styled.div`
@@ -49,7 +50,7 @@ const StyledSwiper = styled(Swiper)`
   .swiper-pagination-progressbar {
     background-color: ${style.PrimaryColor};
     position: absolute;
-    top: 59.5vh;
+    top: 55.5vh;
   }
 
   .swiper-pagination-progressbar-fill {
@@ -61,7 +62,7 @@ const StyledWrapper = styled.div`
   position: relative;
   text-align: center;
   width: 100%;
-  height: 60vh;
+  height: 55vh;
   display: flex;
   flex-direction: column;
 
@@ -160,6 +161,7 @@ const PortfolioProjects = ({ myRef }) => {
           </SwiperSlide>
         ))}
       </StyledSwiper>
+      <PortfolioSkills />
     </StyledProjectsContainer>
   )
 }
