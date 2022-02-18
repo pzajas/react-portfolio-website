@@ -2,7 +2,7 @@ import React from "react"
 import { useEffect, useRef, useState } from "react"
 import { CSSTransition, TransitionGroup } from "react-transition-group"
 import styled from "styled-components"
-import PortfolioSkills from "./components/PortfolioSkills/PortfolioSkills"
+import PortfolioSkills from "./components/skills/PortfolioSkills"
 import PortfolioAbout from "./components/about/PortfolioAbout"
 import PortfolioContact from "./components/contact/PortfolioContact"
 import PortfolioFooter from "./components/footer/PortfolioFooter"
@@ -87,7 +87,6 @@ function App() {
       name: <StyledPortfolioHero menuActive={menuActive} handleScrollToProjects={handleScrollToProjects} />,
     },
     { name: <PortfolioOffer /> },
-    { name: <PortfolioSkills /> },
     { name: <PortfolioAbout /> },
     { name: <PortfolioProjects myRef={myRef} /> },
     { name: <PortfolioContact /> },
