@@ -5,12 +5,10 @@ const StyledSectionTitle = styled.h1`
   font-size: 1rem;
   width: 100%;
   color: white;
-  padding: 1rem 0rem;
-  margin: 0;
 `
 
-const SecondaryTitle = ({ secondarySectionText }) => {
-  return <StyledSectionTitle>{secondarySectionText}</StyledSectionTitle>
+const SecondaryTitle = ({ secondarySectionText, className }) => {
+  return <StyledSectionTitle className={className}>{secondarySectionText}</StyledSectionTitle>
 }
 
 export default SecondaryTitle

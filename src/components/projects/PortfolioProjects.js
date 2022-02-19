@@ -11,6 +11,7 @@ import StyledPrimarySectionTitle from "../../elements/titles/PrimaryTitle"
 import StyledSecondarySectionTitle from "../../elements/titles/SecondaryTitle"
 import PortfolioSkills from "../skills/PortfolioSkills"
 import * as style from "../../variables/Variables"
+import PortfolioProjectsCard from "./PortfolioProjectsCard"
 
 const StyledProjectsContainer = styled.div`
   display: flex;
@@ -130,8 +131,10 @@ const PortfolioProjects = ({ myRef }) => {
   return (
     <StyledProjectsContainer ref={myRef}>
       <StyledPrimarySectionTitle primarySectionText="My recent projects!"></StyledPrimarySectionTitle>
-      <StyledSecondarySectionTitle secondarySectionText="React"></StyledSecondarySectionTitle>
-      <StyledSwiper
+      {/* <StyledSecondarySectionTitle secondarySectionText="React"></StyledSecondarySectionTitle> */}
+      <PortfolioProjectsCard />
+
+      {/* <StyledSwiper
         modules={[EffectFade, Pagination, Navigation, Autoplay]}
         autoplay={{
           loop: true,
@@ -160,8 +163,8 @@ const PortfolioProjects = ({ myRef }) => {
             </StyledWrapper>
           </SwiperSlide>
         ))}
-      </StyledSwiper>
-      <PortfolioSkills />
+      </StyledSwiper> */}
+      {/* <PortfolioSkills /> */}
     </StyledProjectsContainer>
   )
 }
