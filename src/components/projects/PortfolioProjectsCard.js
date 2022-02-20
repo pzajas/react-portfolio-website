@@ -5,9 +5,18 @@ import { ReactLogo } from "@styled-icons/fa-brands/ReactLogo"
 import styled from "styled-components"
 
 const StyledPortfolioProjectsCardContainer = styled.div`
+  p {
+    display: flex;
+    justify-content: center;
+  }
+  div {
+    display: flex;
+    justify-content: space-between;
+  }
+
   img {
-    width: 50%;
-    height: 30vh;
+    width: 100%;
+    height: 60vh;
     transition: all 1s ease;
   }
 `
@@ -41,23 +50,26 @@ const StyledPortfolioProjectsCardButton = styled.button`
 `
 
 const StyledReactLogo = styled(ReactLogo)`
-  position: absolute;
-  top: 15vh;
-  right: 0px;
-  margin-right: 1rem;
   width: 1.2rem;
-  margin-top: 0;
+  color: white;
+  padding: 1rem;
 `
 
 const PortfolioProjectsCard = () => {
   return (
     <StyledPortfolioProjectsCardContainer>
       <img src={img2} />
-      <div>Secondary Text</div>
+      <p>Secondary Text</p>
+      <div>
+        <StyledReactLogo />
+        <StyledReactLogo />
+        <StyledReactLogo />
+        <StyledReactLogo />
+      </div>
       {/* <StyledPortfolioCardMoreInfo>
       
         <StyledPortfolioProjectsCardButton>Visit</StyledPortfolioProjectsCardButton>
-        <StyledReactLogo />
+       
       </StyledPortfolioCardMoreInfo> */}
     </StyledPortfolioProjectsCardContainer>
   )
