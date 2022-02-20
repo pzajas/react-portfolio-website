@@ -3,6 +3,7 @@ import styled from "styled-components"
 
 const StyledPortfolioFormInputContainer = styled.div`
   position: relative;
+  margin-bottom: 1.5rem;
 
   label,
   div {
@@ -11,7 +12,7 @@ const StyledPortfolioFormInputContainer = styled.div`
     padding: 0.2rem;
     background-color: transparent;
     top: -0.7rem;
-    opacity: 0.9;
+    opacity: 0.5;
   }
 
   label {
@@ -19,12 +20,14 @@ const StyledPortfolioFormInputContainer = styled.div`
   }
 
   div {
+    opacity: 1;
     color: red;
     left: 4rem;
   }
 `
 
 const StyledPortfolioField = styled(Field)`
+  font-size: 0.8rem;
   &:-webkit-autofill {
     transition: background-color 90000000s;
     -webkit-text-fill-color: white;

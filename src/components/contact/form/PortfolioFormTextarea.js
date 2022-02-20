@@ -5,6 +5,7 @@ import { Field, ErrorMessage } from "formik"
 const StyledPortfolioFormAreaContainer = styled.div`
   height: 10rem;
   position: relative;
+  margin-bottom: 1.5rem;
 
   label,
   div {
@@ -14,6 +15,7 @@ const StyledPortfolioFormAreaContainer = styled.div`
     padding: 0.2rem;
     background-color: transparent;
     top: -0.7rem;
+    opacity: 0.4;
   }
 
   label {
@@ -23,6 +25,7 @@ const StyledPortfolioFormAreaContainer = styled.div`
   div {
     color: red;
     left: 4rem;
+    opacity: 1;
   }
 `
 

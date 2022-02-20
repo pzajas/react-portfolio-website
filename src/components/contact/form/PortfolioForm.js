@@ -64,11 +64,8 @@ const PortfolioForm = () => {
       {formik => (
         <StyledFormContainer>
           <StyledPortfolioFormControlInput control="name" label="Name" name="name" />
-          <Line />
           <StyledPortfolioFormControlInput control="email" label="Email" name="email" />
-          <Line />
           <StyledPortfolioFormControlArea control="textarea" label="Message" name="textarea" />
-          <Line />
           <StyledPrimaryButton type="submit" style={{ padding: 0 }} buttonText="Submit">
             Submit
           </StyledPrimaryButton>

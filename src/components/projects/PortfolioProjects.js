@@ -18,12 +18,12 @@ const StyledProjectsContainer = styled.div`
   flex-direction: column;
   justify-content: left;
   gap: 0rem;
-  height: 100vh;
+  height: 90vh;
   background-color: ${style.PrimaryColor};
   color: ${style.TeriaryColor};
 
   margin-bottom: ${style.PrimaryMarginBottom};
-  padding: 1rem 2rem 1rem 2rem;
+  padding: 5vh 2rem 5vh 2rem;
   scroll-snap-align: start;
 `
 
