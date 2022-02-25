@@ -57,9 +57,9 @@ const PortfolioFooter = ({ handleScrollToTheTop }) => {
 
   return (
     <StyledPortfolioFooter>
-      <StyledSecondaryButtonContainer secondaryButtonClick={handleScrollToTheTop}>
+      {/* <StyledSecondaryButtonContainer secondaryButtonClick={handleScrollToTheTop}>
         <SecondaryButton />
-      </StyledSecondaryButtonContainer>
+      </StyledSecondaryButtonContainer> */}
       <StyledIconsContainer>
         {iconsArray.map(icon => (
           <li key={icon.icon}>{icon.icon}</li>
