@@ -3,7 +3,6 @@ import * as style from "../../../variables/Variables"
 import { Field, ErrorMessage } from "formik"
 
 const StyledPortfolioFormAreaContainer = styled.div`
-  height: 10rem;
   position: relative;
   margin-bottom: 1.5rem;
 
