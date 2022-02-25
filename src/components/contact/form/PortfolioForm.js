@@ -45,6 +45,9 @@ const StyledPortfolioFormControlArea = styled(PortfolioFormControl)`
 `
 
 const StyledPrimaryButton = styled(PrimaryButton)`
+  width: 22%;
+  padding: 0;
+  margin: 0;
   border: none;
   background-color: transparent;
   color: ${style.SecondaryColor};
