@@ -39,7 +39,7 @@ const StyledPortfolioFormControlInput = styled(PortfolioFormControl)`
 `
 
 const StyledPortfolioFormControlArea = styled(PortfolioFormControl)`
-  height: 10rem;
+  height: 8rem;
   padding: 0.6rem 0rem 0.6rem 0.2rem;
   resize: none;
 `
@@ -51,10 +51,14 @@ const StyledPrimaryButton = styled(PrimaryButton)`
 `
 
 const PortfolioForm = () => {
-  const initialValues = { name: "", email: "", textarea: "" }
+  const regexPhoneNumberValidation =
+    /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/
+
+  const initialValues = { name: "", email: "", phone: "", textarea: "" }
   const validationSchema = Yup.object({
     name: Yup.string().required("Required"),
-    email: Yup.string().email("Invalid email format.").required("Required"),
+    email: Yup.string().email("Invalid email format").required("Required"),
+    phone: Yup.string().matches(regexPhoneNumberValidation, "Invalid number format").required("Required"),
     textarea: Yup.string().required("Required"),
   })
   const onSubmit = values => console.log("Form data", values)
@@ -65,6 +69,7 @@ const PortfolioForm = () => {
         <StyledFormContainer>
           <StyledPortfolioFormControlInput control="name" label="Name" name="name" />
           <StyledPortfolioFormControlInput control="email" label="Email" name="email" />
+          <StyledPortfolioFormControlInput control="phone" label="Phone" name="phone" />
           <StyledPortfolioFormControlArea control="textarea" label="Message" name="textarea" />
           <StyledPrimaryButton type="submit" style={{ padding: 0 }} buttonText="Submit">
             Submit

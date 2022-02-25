@@ -9,6 +9,8 @@ const PortfolioFormControl = props => {
       return <PortfolioFormInput {...rest} />
     case "email":
       return <PortfolioFormInput {...rest} />
+    case "phone":
+      return <PortfolioFormInput {...rest} />
     case "textarea":
       return <PortfolioFormTextarea {...rest} />
     default:
