@@ -73,68 +73,47 @@ const StyledWrapper = styled.div`
     border-radius: 0.2rem;
   }
 
-  div {
-    position: absolute;
-    top: 65%;
-    left: 0px;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-  }
-
-  h4 {
-    position: absolute;
-    top: 70%;
-    left: 0px;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-  }
-
-  p {
-    position: absolute;
-    top: 75%;
-    left: 0px;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-  }
-
   &:hover {
     & * {
       transition: all 2s ease;
+      opacity: 1;
     }
 
     img {
       filter: blur(2px) brightness(40%);
     }
-
-    div {
-      opacity: 1;
-    }
-    h4 {
-      opacity: 1;
-    }
-    p {
-      opacity: 1;
-    }
   }
 `
+
+const StyledPortfolioProjectsCard = styled(PortfolioProjectsCard)`
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 25vh;
+  height: 25vh;
+  width: 100%;
+  /* height: 40vh; */
+  color: red;
+  display: flex;
+  flex-direction: column;
+  background-color: red;
+`
+
 const PortfolioProjects = ({ myRef }) => {
   const projectImages = [
     { image: img1, title: "Currency Converter", description: "Something" },
-    { image: img2, title: "Text1", description: " Desc" },
-    { image: img3, title: "Text2", description: " Desc" },
-    { image: img5, title: "Text3", description: " Desc" },
+    // { image: img2, title: "Text1", description: " Desc" },
+    // { image: img3, title: "Text2", description: " Desc" },
+    // { image: img5, title: "Text3", description: " Desc" },
   ]
 
   return (
     <StyledProjectsContainer ref={myRef}>
       <StyledPrimarySectionTitle primarySectionText="My recent projects!"></StyledPrimarySectionTitle>
       {/* <StyledSecondarySectionTitle secondarySectionText="React"></StyledSecondarySectionTitle> */}
-      <PortfolioProjectsCard />
+      {/* <PortfolioProjectsCard /> */}
 
-      {/* <StyledSwiper
+      <StyledSwiper
         modules={[EffectFade, Pagination, Navigation, Autoplay]}
         autoplay={{
           loop: true,
@@ -157,13 +136,16 @@ const PortfolioProjects = ({ myRef }) => {
           <SwiperSlide key={projectImage.title}>
             <StyledWrapper>
               <img src={projectImage.image} />
-              <div>{projectImage.title}</div>
-              <h4>{projectImage.title}</h4>
-              <p>{projectImage.description}</p>
+              <StyledPortfolioProjectsCard />
+              {/* <div>
+                <div>{projectImage.title}</div>
+                <h4>{projectImage.title}</h4>
+                <p>{projectImage.description}</p>
+              </div> */}
             </StyledWrapper>
           </SwiperSlide>
         ))}
-      </StyledSwiper> */}
+      </StyledSwiper>
       {/* <PortfolioSkills /> */}
     </StyledProjectsContainer>
   )
