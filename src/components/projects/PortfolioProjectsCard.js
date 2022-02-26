@@ -5,7 +5,7 @@ import { ReactLogo } from "@styled-icons/fa-brands/ReactLogo"
 import styled from "styled-components"
 
 const StyledPortfolioProjectsCardContainer = styled.div`
-  p {
+  /* p {
     display: flex;
     justify-content: center;
   }
@@ -18,32 +18,41 @@ const StyledPortfolioProjectsCardContainer = styled.div`
     width: 100%;
     height: 60vh;
     transition: all 1s ease;
-  }
+  } */
 `
 
 const StyledPortfolioCardMoreInfo = styled.div`
-  position: absolute;
-  top: 55vh;
-  height: 5vh;
+  /* height: 30vh; */
   width: 100%;
-  background-color: white;
-  /* display: grid;
-    place-content: center; */
+  background-color: rgba(30, 30, 30);
+  display: grid;
+  place-content: center;
   transition: all 0.5s ease;
-  overflow: hidden;
+  /* overflow: hidden; */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  /* align-items: flex-start; */
+  opacity: 1;
 
   &:hover {
-    height: 50%;
-    top: 0;
-    background-color: rgba(255, 72, 0, 0.6);
+    /* height: 40vh; */
+    background-color: rgba(30, 30, 30);
     transition: all 0.5s ease;
+  }
+
+  p {
+    margin: 0;
   }
 `
 
+const StyledSecondaryTitle = styled(SecondaryTitle)`
+  margin: 0;
+  padding: 0.5rem;
+  font-size: 1rem;
+`
+
 const StyledPortfolioProjectsCardButton = styled.button`
-  position: absolute;
-  top: 17vh;
-  left: 0px;
   opacity: 0.5;
   border: none;
   height: 1rem;
@@ -55,22 +64,17 @@ const StyledReactLogo = styled(ReactLogo)`
   padding: 1rem;
 `
 
-const PortfolioProjectsCard = () => {
+const PortfolioProjectsCard = ({ className }) => {
   return (
-    <StyledPortfolioProjectsCardContainer>
-      <img src={img2} />
-      <p>Secondary Text</p>
-      <div>
-        <StyledReactLogo />
-        <StyledReactLogo />
-        <StyledReactLogo />
-        <StyledReactLogo />
-      </div>
-      {/* <StyledPortfolioCardMoreInfo>
-      
+    <StyledPortfolioProjectsCardContainer className={className}>
+      pppppppppppppp
+      {/* <button>sda</button> */}
+      <StyledPortfolioCardMoreInfo>
+        <StyledSecondaryTitle secondarySectionText="Currency Converter" />
+        <p>loremsdasdkasdlasdladja asldjajsdlasd jalsdj asdlja sdjal jdj jljljlj da djalsdjajsdlkjad</p>
+
         <StyledPortfolioProjectsCardButton>Visit</StyledPortfolioProjectsCardButton>
-       
-      </StyledPortfolioCardMoreInfo> */}
+      </StyledPortfolioCardMoreInfo>
     </StyledPortfolioProjectsCardContainer>
   )
 }
