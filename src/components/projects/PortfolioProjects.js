@@ -90,7 +90,7 @@ const StyledPortfolioProjectsCard = styled(PortfolioProjectsCard)`
   padding: 0;
   position: absolute;
   top: 25vh;
-  height: 25vh;
+  /* height: 25vh; */
   width: 100%;
   /* height: 40vh; */
   color: red;
@@ -102,9 +102,9 @@ const StyledPortfolioProjectsCard = styled(PortfolioProjectsCard)`
 const PortfolioProjects = ({ myRef }) => {
   const projectImages = [
     { image: img1, title: "Currency Converter", description: "Something" },
-    // { image: img2, title: "Text1", description: " Desc" },
-    // { image: img3, title: "Text2", description: " Desc" },
-    // { image: img5, title: "Text3", description: " Desc" },
+    { image: img2, title: "Text1", description: " Desc" },
+    { image: img3, title: "Text2", description: " Desc" },
+    { image: img5, title: "Text3", description: " Desc" },
   ]
 
   return (
