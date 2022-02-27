@@ -48,7 +48,7 @@ const StyledPortfolioCardMoreInfo = styled.div`
 
 const StyledSecondaryTitle = styled(SecondaryTitle)`
   margin: 0;
-  padding: 0.5rem;
+  /* padding: 0.5rem; */
   font-size: 1rem;
 `
 
@@ -67,7 +67,6 @@ const StyledReactLogo = styled(ReactLogo)`
 const PortfolioProjectsCard = ({ className }) => {
   return (
     <StyledPortfolioProjectsCardContainer className={className}>
-      pppppppppppppp
       {/* <button>sda</button> */}
       <StyledPortfolioCardMoreInfo>
         <StyledSecondaryTitle secondarySectionText="Currency Converter" />
