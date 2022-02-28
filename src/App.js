@@ -90,9 +90,7 @@ function App() {
     { name: <PortfolioAbout /> },
     { name: <PortfolioProjects myRef={myRef} /> },
     { name: <PortfolioContact /> },
-    {
-      name: <PortfolioFooter handleScrollToTheTop={handleScrollToTheTop} />,
-    },
+    { name: <PortfolioFooter handleScrollToTheTop={handleScrollToTheTop} /> },
   ]
 
   return (
