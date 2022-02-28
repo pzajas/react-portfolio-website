@@ -19,7 +19,7 @@ const StyledSplashContainer = styled.div`
 `
 
 const PortfolioSplash = ({ className }) => {
-  return <StyledSplashContainer className={className}>Welcome.</StyledSplashContainer>
+  return <StyledSplashContainer className={className}>Check in iPhone SE5 Mode</StyledSplashContainer>
 }
 
 export default PortfolioSplash

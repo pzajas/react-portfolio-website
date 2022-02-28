@@ -90,14 +90,12 @@ function App() {
     { name: <PortfolioAbout /> },
     { name: <PortfolioProjects myRef={myRef} /> },
     { name: <PortfolioContact /> },
-    {
-      name: <PortfolioFooter handleScrollToTheTop={handleScrollToTheTop} />,
-    },
+    { name: <PortfolioFooter handleScrollToTheTop={handleScrollToTheTop} /> },
   ]
 
   return (
     <StyledWebsiteContainer>
-      {splashActive ? (
+      {/* {splashActive ? (
         <CSSTransition
           in={splashActive}
           timeout={{ exit: 3000, appear: 2000 }}
@@ -115,7 +113,7 @@ function App() {
             </CSSTransition>
           ))}
         </TransitionGroup>
-      ) : null}
+      ) : null} */}
     </StyledWebsiteContainer>
   )
 }
