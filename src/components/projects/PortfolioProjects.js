@@ -85,34 +85,14 @@ const StyledWrapper = styled.div`
   }
 `
 
-const StyledPortfolioProjectsCard = styled(PortfolioProjectsCard)`
-  margin: 0;
-  padding: 0;
-  position: absolute;
-  top: 25vh;
-  /* height: 25vh; */
-  width: 100%;
-  /* height: 40vh; */
-  color: red;
-  display: flex;
-  flex-direction: column;
-  background-color: red;
-`
+const StyledPortfolioProjectsCard = styled(PortfolioProjectsCard)``
 
 const PortfolioProjects = ({ myRef }) => {
-  const projectImages = [
-    { image: img1, title: "Currency Converter", description: "Something" },
-    { image: img2, title: "Text1", description: " Desc" },
-    { image: img3, title: "Text2", description: " Desc" },
-    { image: img5, title: "Text3", description: " Desc" },
-  ]
+  const projectImages = [{ image: <StyledPortfolioProjectsCard img={img2} text="Title" /> }]
 
   return (
     <StyledProjectsContainer ref={myRef}>
       <StyledPrimarySectionTitle primarySectionText="My recent projects!"></StyledPrimarySectionTitle>
-      {/* <StyledSecondarySectionTitle secondarySectionText="React"></StyledSecondarySectionTitle> */}
-      {/* <PortfolioProjectsCard /> */}
-
       <StyledSwiper
         modules={[EffectFade, Pagination, Navigation, Autoplay]}
         autoplay={{
@@ -133,20 +113,11 @@ const PortfolioProjects = ({ myRef }) => {
         spaceBetween={10}
       >
         {projectImages.map(projectImage => (
-          <SwiperSlide key={projectImage.title}>
-            <StyledWrapper>
-              <img src={projectImage.image} />
-              <StyledPortfolioProjectsCard />
-              {/* <div>
-                <div>{projectImage.title}</div>
-                <h4>{projectImage.title}</h4>
-                <p>{projectImage.description}</p>
-              </div> */}
-            </StyledWrapper>
+          <SwiperSlide>
+            <StyledWrapper>{projectImage.image}</StyledWrapper>
           </SwiperSlide>
         ))}
       </StyledSwiper>
-      {/* <PortfolioSkills /> */}
     </StyledProjectsContainer>
   )
 }
