@@ -95,7 +95,7 @@ function App() {
 
   return (
     <StyledWebsiteContainer>
-      {/* {splashActive ? (
+      {splashActive ? (
         <CSSTransition
           in={splashActive}
           timeout={{ exit: 3000, appear: 2000 }}
@@ -113,7 +113,7 @@ function App() {
             </CSSTransition>
           ))}
         </TransitionGroup>
-      ) : null} */}
+      ) : null}
     </StyledWebsiteContainer>
   )
 }
