@@ -75,7 +75,7 @@ const StyledWrapper = styled.div`
 
   &:hover {
     & * {
-      transition: all 2s ease;
+      transition: all 0.5s ease;
       opacity: 1;
     }
 
