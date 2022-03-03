@@ -2,6 +2,7 @@ import SecondaryTitle from "../../elements/titles/SecondaryTitle"
 import img2 from "../../assets/img2.jpg"
 import PrimaryButton from "../../elements/buttons/PrimaryButton"
 import { ReactLogo } from "@styled-icons/fa-brands/ReactLogo"
+import * as style from "../../variables/Variables"
 
 import styled from "styled-components"
 
@@ -10,80 +11,70 @@ const StyledPortfolioProjectsCardContainer = styled.div`
   height: 60vh;
   position: relative;
   overflow-wrap: break-word;
-
-  /* p {
-    display: flex;
-    justify-content: center;
-  } */
-
-  /* img {
-    width: 100%;
-    height: 100%;
-    transition: all 1s ease;
-  } */
-
-  p {
-    width: 100%;
-  }
-  button {
-    width: 40%;
-  }
 `
 
 const StyledPortfolioCardMoreInfo = styled.div`
   position: absolute;
   box-sizing: border-box;
-  top: 20vh;
+  top: 51vh;
   width: 100%;
-  height: 40vh;
-  background-color: red;
+  height: 9vh;
+  background-color: rgba(35, 35, 35);
+  text-align: left;
+  padding: 1rem;
+  transition: all 0.5s ease;
 
-  /* &:hover {
+  p {
+  }
+
+  & * {
+    padding: 0rem 0rem 1rem 0rem;
+  }
+
+  div {
+    box-sizing: border-box;
+    margin: 0;
+  }
+
+  &:hover {
     position: absolute;
-    top: 20vh;
-    height: 40vh;
+    top: 0vh;
+    height: 60vh;
     background-color: rgba(40, 40, 40);
     transition: all 0.5s ease;
   }
+`
 
-  div,
-  p {
-    position: absolute;
-    top: 10vh;
-    padding: 0.5rem;
-  } */
+const StyledP = styled.p`
+  box-sizing: border-box;
+  font-size: 0.7rem;
+  margin: 0;
+  text-align: justify;
+  text-justify: inter-word;
 `
 
 const StyledSecondaryTitle = styled(SecondaryTitle)`
   box-sizing: border-box;
   margin: 0;
-  padding: 0.5rem;
   font-size: 1rem;
 `
 
-const StyledPortfolioProjectsCardButton = styled.button`
+const StyledPortfolioProjectsCardButton = styled(PrimaryButton)`
+  padding: 0;
+  font-size: 1rem;
   position: absolute;
-  top: 80%;
-  opacity: 0.5;
-  border: none;
-  height: 1rem;
+  top: 51vh;
 `
 
-const StyledReactLogo = styled(ReactLogo)`
-  width: 1.2rem;
-  color: white;
-  padding: 1rem;
-`
-
-const PortfolioProjectsCard = ({ className, img, text }) => {
+const PortfolioProjectsCard = ({ className, image, name, description }) => {
   return (
     <StyledPortfolioProjectsCardContainer className={className}>
-      <img src={img} />
+      <img src={image} />
       <StyledPortfolioCardMoreInfo>
         <StyledSecondaryTitle secondarySectionText="Learn More" />
-        <div>{text}</div>
-        <p>sdlkfjsdfsdfsdfsdfsfsdfsfsdfsdfsdsfsfsfsdfsdfsfsfdslfk</p>
-        <StyledPortfolioProjectsCardButton>Visit</StyledPortfolioProjectsCardButton>
+        <StyledSecondaryTitle secondarySectionText={name} />
+        <StyledP>{description}</StyledP>
+        <StyledPortfolioProjectsCardButton buttonText="Visit" />
       </StyledPortfolioCardMoreInfo>
     </StyledPortfolioProjectsCardContainer>
   )

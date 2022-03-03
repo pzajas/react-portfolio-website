@@ -7,10 +7,10 @@ const StyledPrimaryButtonContainer = styled.p`
   color: ${style.SecondaryColor};
   font-size: 1rem;
   /* border-bottom: 1px solid ${style.PrimaryColor}; */
-  height: auto;
+  /* height: auto; */
 
   transition: all 0.5s ease-in-out;
-  padding-bottom: 0.5rem;
+  /* padding-bottom: 0.5rem; */
 
   &:hover {
     /* border-bottom: 1px solid ${style.TeriaryColor}; */

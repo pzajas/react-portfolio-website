@@ -51,7 +51,7 @@ const StyledSwiper = styled(Swiper)`
   .swiper-pagination-progressbar {
     background-color: ${style.PrimaryColor};
     position: absolute;
-    top: 55.5vh;
+    top: 59.5vh;
   }
 
   .swiper-pagination-progressbar-fill {
@@ -88,7 +88,32 @@ const StyledWrapper = styled.div`
 const StyledPortfolioProjectsCard = styled(PortfolioProjectsCard)``
 
 const PortfolioProjects = ({ myRef }) => {
-  const projectImages = [{ image: <StyledPortfolioProjectsCard img={img2} text="Title" /> }]
+  const projectImages = [
+    {
+      image: (
+        <StyledPortfolioProjectsCard
+          image={img2}
+          name="Currency Converter"
+          description="This is a not-so-simple multi currency converter written in React.js with the use of extrernal 
+          libraries such as react-select, styled-components and axios. All data is provided by two APIs and thanks to 
+          that this application has access to almost one hundred and fifty unique currencies along with their full names, symbols 
+          and, above all, exchange rates."
+        />
+      ),
+    },
+    {
+      image: (
+        <StyledPortfolioProjectsCard
+          image={img1}
+          name="Currency Converter"
+          description="This is a not-so-simple multi currency converter written in React.js with the use of extrernal 
+          libraries such as react-select, styled-components and axios. All data is provided by two APIs and thanks to 
+          that this application has access to almost one hundred and fifty unique currencies along with their full names, symbols 
+          and, above all, exchange rates."
+        />
+      ),
+    },
+  ]
 
   return (
     <StyledProjectsContainer ref={myRef}>
@@ -101,11 +126,6 @@ const PortfolioProjects = ({ myRef }) => {
           disableOnInteraction: false,
           pauseOnMouseEnter: true,
         }}
-        pagination={{
-          type: "progressbar",
-          clickable: true,
-        }}
-        navigation={true}
         slidesPerView={"auto"}
         effect={"fade"}
         fadeEffect={{ crossFade: false }}
