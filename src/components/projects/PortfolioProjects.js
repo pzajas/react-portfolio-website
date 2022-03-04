@@ -105,11 +105,11 @@ const PortfolioProjects = ({ myRef }) => {
       image: (
         <StyledPortfolioProjectsCard
           image={img1}
-          name="Currency Converter"
-          description="This is a not-so-simple multi currency converter written in React.js with the use of extrernal 
-          libraries such as react-select, styled-components and axios. All data is provided by two APIs and thanks to 
-          that this application has access to almost one hundred and fifty unique currencies along with their full names, symbols 
-          and, above all, exchange rates."
+          name="Portfolio Website"
+          description="This is a simple portfolio website written in React.js. Some external libraries 
+          (styled-components, formik, css-transition-group and swpier-slider) were used. The amount of javascript is not
+          so great here so I highly advice to check another projects in this section to have a full grasp of my skills and
+          coding style. I have to say I quite like this one!"
         />
       ),
     },
