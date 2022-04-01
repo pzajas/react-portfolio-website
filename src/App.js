@@ -2,6 +2,7 @@ import React from "react"
 import { useEffect, useRef, useState } from "react"
 import { CSSTransition, TransitionGroup } from "react-transition-group"
 import styled from "styled-components"
+import PortfolioPlans from "./components/future/PortfolioPlans"
 import PortfolioSkills from "./components/skills/PortfolioSkills"
 import PortfolioAbout from "./components/about/PortfolioAbout"
 import PortfolioContact from "./components/contact/PortfolioContact"
@@ -20,7 +21,7 @@ const StyledWebsiteContainer = styled.div`
   height: 100vh;
 
   & * {
-    font-family: "Montserrat", sans-serif;
+    font-family: "Poppins", sans-serif;
   }
 `
 const StyledPortfolioSplash = styled(PortfolioSplash)`
@@ -87,6 +88,7 @@ function App() {
       name: <StyledPortfolioHero menuActive={menuActive} handleScrollToProjects={handleScrollToProjects} />,
     },
     { name: <PortfolioOffer /> },
+    { name: <PortfolioPlans /> },
     { name: <PortfolioAbout /> },
     { name: <PortfolioProjects myRef={myRef} /> },
     { name: <PortfolioContact /> },
