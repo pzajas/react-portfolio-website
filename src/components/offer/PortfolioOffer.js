@@ -46,7 +46,7 @@ const PortfolioOffer = () => {
   ]
   return (
     <StyledOfferContainer>
-      <StyledSectionTitle primarySectionText="What can I offer ?"></StyledSectionTitle>
+      <StyledSectionTitle primarySectionText="What can I offer ?" />
       {portfolioOffersArray.map(({ icon, title, paragraph }) => (
         <PortfolioOfferCard key={title} icon={icon} title={title} paragraph={paragraph} />
       ))}

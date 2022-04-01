@@ -11,7 +11,7 @@ const StyledAboutContainer = styled.div`
   color: ${style.TeriaryColor};
 
   margin-bottom: ${style.PrimaryMarginBottom};
-  padding: 1rem 2rem 1rem 2rem;
+  padding: 2rem;
   scroll-snap-align: start;
 `
 

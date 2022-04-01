@@ -1,5 +1,4 @@
 import styled from "styled-components"
-import { ArrowRightShort } from "@styled-icons/bootstrap/ArrowRightShort"
 import PrimaryButton from "../../elements/buttons/PrimaryButton"
 import * as style from "../../variables/Variables"
 
@@ -50,11 +49,6 @@ const StyledHeroButtonContainer = styled.div`
   }
 `
 
-const StyledArrowShort = styled(ArrowRightShort)`
-  padding: 0rem 0rem 0.5rem 0.3rem;
-  width: 1.3rem;
-`
-
 const PortfolioHero = ({ menuActive, handleScrollToProjects, className }) => {
   return (
     <StyledHeroContainer menuActive={menuActive} className={className}>
@@ -65,7 +59,7 @@ const PortfolioHero = ({ menuActive, handleScrollToProjects, className }) => {
       </StyledHeroText>
 
       <StyledHeroButtonContainer>
-        <PrimaryButton buttonText="See my work" primaryButtonClick={handleScrollToProjects} /> <StyledArrowShort />
+        <PrimaryButton buttonText="See my work" primaryButtonClick={handleScrollToProjects} />
       </StyledHeroButtonContainer>
     </StyledHeroContainer>
   )
