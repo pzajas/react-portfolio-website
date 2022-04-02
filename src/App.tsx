@@ -1,4 +1,4 @@
-import React from "react"
+import { FunctionComponent } from "react"
 import { useEffect, useRef, useState } from "react"
 import { CSSTransition, TransitionGroup } from "react-transition-group"
 import styled from "styled-components"
@@ -12,6 +12,7 @@ import PortfolioNavbar from "./components/navbar/PortfolioNavbar"
 import PortfolioOffer from "./components/offer/PortfolioOffer"
 import PortfolioProjects from "./components/projects/PortfolioProjects"
 import PortfolioSplash from "./components/splash/PortfolioSplash"
+import { Interface } from "readline"
 
 const StyledWebsiteContainer = styled.div`
   padding: 0;
@@ -61,7 +62,7 @@ const StyledPortfolioHero = styled(PortfolioHero)`
   }
 `
 
-function App() {
+const App = () => {
   const [menuActive, setMenuActive] = useState(false)
   const [splashActive, setSplashActive] = useState(true)
 
