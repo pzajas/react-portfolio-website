@@ -11,7 +11,11 @@ const PortfolioContactContainer = styled.div`
   color: ${style.TeriaryColor};
 `
 
-const PortfolioContact = ({ className }) => {
+interface Props {
+  className?: string
+}
+
+const PortfolioContact = ({ className }: Props) => {
   return (
     <PortfolioContactContainer className={className}>
       <PortfolioForm />
