@@ -1,3 +1,4 @@
+import { FunctionComponent } from "react"
 import styled from "styled-components"
 import StyledPrimarySectionTitle from "../../elements/titles/PrimaryTitle"
 import * as style from "../../variables/Variables"
@@ -18,7 +19,11 @@ const StyledSplashContainer = styled.div`
   background-color: ${style.PrimaryColor};
 `
 
-const PortfolioSplash = ({ className }) => {
+interface InterfacePortfolioSplash {
+  className?: any
+}
+
+const PortfolioSplash: FunctionComponent<InterfacePortfolioSplash> = ({ className }) => {
   return <StyledSplashContainer className={className}>Check in iPhone SE5 Mode</StyledSplashContainer>
 }
 

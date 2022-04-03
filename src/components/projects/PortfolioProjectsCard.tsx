@@ -1,3 +1,4 @@
+import { FunctionComponent } from "react"
 import SecondaryTitle from "../../elements/titles/SecondaryTitle"
 import img2 from "../../assets/img2.jpg"
 import PrimaryButton from "../../elements/buttons/PrimaryButton"
@@ -66,7 +67,19 @@ const StyledPortfolioProjectsCardButton = styled(PrimaryButton)`
   top: 51vh;
 `
 
-const PortfolioProjectsCard = ({ className, image, name, description }) => {
+interface InterfacePortfolioProjectsCard {
+  className?: any
+  image: string
+  name: string
+  description: string
+}
+
+const PortfolioProjectsCard: FunctionComponent<InterfacePortfolioProjectsCard> = ({
+  className,
+  image,
+  name,
+  description,
+}) => {
   return (
     <StyledPortfolioProjectsCardContainer className={className}>
       <img src={image} />

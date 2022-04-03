@@ -64,7 +64,7 @@ const PortfolioForm = () => {
     phone: Yup.string().matches(regexPhoneNumberValidation, "Invalid number format").required("Required"),
     textarea: Yup.string().required("Required"),
   })
-  const onSubmit = values => console.log("Form data", values)
+  const onSubmit = (values: any) => console.log("Form data", values)
 
   return (
     <Formik initialValues={initialValues} validationSchema={validationSchema} onSubmit={onSubmit}>
@@ -74,7 +74,7 @@ const PortfolioForm = () => {
           <StyledPortfolioFormControlInput control="email" label="Email" name="email" />
           <StyledPortfolioFormControlInput control="phone" label="Phone" name="phone" />
           <StyledPortfolioFormControlArea control="textarea" label="Message" name="textarea" />
-          <StyledPrimaryButton type="submit" style={{ padding: 0 }} buttonText="Submit">
+          <StyledPrimaryButton type="submit" buttonText="Submit">
             Submit
           </StyledPrimaryButton>
         </StyledFormContainer>

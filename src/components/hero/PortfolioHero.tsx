@@ -49,7 +49,13 @@ const StyledHeroButtonContainer = styled.div`
   }
 `
 
-const PortfolioHero = ({ menuActive, handleScrollToProjects, className }) => {
+interface InterfacePortfolioHero {
+  menuActive: boolean
+  handleScrollToProjects: any
+  className?: any
+}
+
+const PortfolioHero: React.FC<InterfacePortfolioHero> = ({ menuActive, handleScrollToProjects, className }) => {
   return (
     <StyledHeroContainer menuActive={menuActive} className={className}>
       <StyledHeroText>

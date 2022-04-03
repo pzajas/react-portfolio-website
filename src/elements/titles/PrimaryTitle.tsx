@@ -1,3 +1,4 @@
+import { FunctionComponent } from "react"
 import styled from "styled-components"
 
 const StyledSectionTitle = styled.h1`
@@ -12,7 +13,11 @@ const StyledSectionTitle = styled.h1`
   justify-content: left;
 `
 
-const PrimaryTitle = ({ primarySectionText }) => {
+interface InterfacePrimaryTitle {
+  primarySectionText: string
+}
+
+const PrimaryTitle: FunctionComponent<InterfacePrimaryTitle> = ({ primarySectionText }) => {
   return <StyledSectionTitle>{primarySectionText}</StyledSectionTitle>
 }
 
