@@ -1,5 +1,5 @@
 import "swiper/css/bundle"
-
+import { FunctionComponent } from "react"
 import styled from "styled-components"
 import { Autoplay, EffectFade, Navigation, Pagination } from "swiper"
 import { Swiper, SwiperSlide } from "swiper/react"
@@ -87,7 +87,11 @@ const StyledWrapper = styled.div`
 
 const StyledPortfolioProjectsCard = styled(PortfolioProjectsCard)``
 
-const PortfolioProjects = ({ myRef }) => {
+interface InterfacePortfolioProjects {
+  myRef: null
+}
+
+const PortfolioProjects: FunctionComponent<InterfacePortfolioProjects> = ({ myRef }) => {
   const projectImages = [
     {
       image: (

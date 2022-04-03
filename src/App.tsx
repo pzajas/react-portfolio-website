@@ -1,4 +1,3 @@
-import { FunctionComponent } from "react"
 import { useEffect, useRef, useState } from "react"
 import { CSSTransition, TransitionGroup } from "react-transition-group"
 import styled from "styled-components"
@@ -12,7 +11,6 @@ import PortfolioNavbar from "./components/navbar/PortfolioNavbar"
 import PortfolioOffer from "./components/offer/PortfolioOffer"
 import PortfolioProjects from "./components/projects/PortfolioProjects"
 import PortfolioSplash from "./components/splash/PortfolioSplash"
-import { Interface } from "readline"
 
 const StyledWebsiteContainer = styled.div`
   padding: 0;
@@ -76,10 +74,12 @@ const App = () => {
   }, [])
 
   const handleScrollToProjects = () => {
+    // @ts-ignore: Object is possibly 'null'.
     myRef.current.scrollIntoView()
   }
 
   const handleScrollToTheTop = () => {
+    // @ts-ignore: Object is possibly 'null'.
     toTheTop.current.scrollIntoView()
   }
 

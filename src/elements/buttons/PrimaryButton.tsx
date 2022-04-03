@@ -1,3 +1,4 @@
+import { FunctionComponent, MouseEventHandler } from "react"
 import styled from "styled-components"
 import * as style from "../../variables/Variables"
 
@@ -19,7 +20,14 @@ const StyledPrimaryButtonContainer = styled.p`
   }
 `
 
-const PrimaryButton = ({ buttonText, primaryButtonClick, className }) => {
+interface InterfacePrimaryButton {
+  buttonText: string
+  className?: any
+  primaryButtonClick: MouseEventHandler<HTMLParagraphElement>
+  type: string
+}
+
+const PrimaryButton: FunctionComponent<InterfacePrimaryButton> = ({ buttonText, className, primaryButtonClick }) => {
   return (
     <StyledPrimaryButtonContainer className={className} onClick={primaryButtonClick}>
       {buttonText}

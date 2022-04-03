@@ -1,3 +1,4 @@
+import { FunctionComponent } from "react"
 import { Link } from "react-router-dom"
 import styled from "styled-components"
 import * as style from "../../variables/Variables"
@@ -79,7 +80,19 @@ const StyledHamburgerContainer = styled.div`
   }
 `
 
-const PortfolioNavbar = ({ menuActive, setMenuActive, className, toTheTop }) => {
+interface InterfacePortfolioNavbar {
+  menuActive: boolean
+  toTheTop: React.MutableRefObject<any>
+  className?: any
+  setMenuActive: React.Dispatch<React.SetStateAction<boolean>>
+}
+
+const PortfolioNavbar: FunctionComponent<InterfacePortfolioNavbar> = ({
+  menuActive,
+  className,
+  toTheTop,
+  setMenuActive,
+}) => {
   const handleToggleMenu = () => {
     setMenuActive(!menuActive)
   }
