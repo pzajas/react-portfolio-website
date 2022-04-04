@@ -5,8 +5,6 @@ import { Autoplay, EffectFade, Navigation, Pagination } from "swiper"
 import { Swiper, SwiperSlide } from "swiper/react"
 import img1 from "../../assets/img1.jpg"
 import img2 from "../../assets/img2.jpg"
-import img3 from "../../assets/img3.jpg"
-import img5 from "../../assets/img5.png"
 import StyledPrimarySectionTitle from "../../elements/titles/PrimaryTitle"
 import StyledSecondarySectionTitle from "../../elements/titles/SecondaryTitle"
 import PortfolioSkills from "../skills/PortfolioSkills"
@@ -125,7 +123,7 @@ const PortfolioProjects: FunctionComponent<InterfacePortfolioProjects> = ({ myRe
       <StyledSwiper
         modules={[EffectFade, Pagination, Navigation, Autoplay]}
         autoplay={{
-          loop: true,
+          // loop: true,
           delay: 3000,
           disableOnInteraction: false,
           pauseOnMouseEnter: true,

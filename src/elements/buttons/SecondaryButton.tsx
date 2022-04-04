@@ -1,3 +1,4 @@
+import { FunctionComponent, MouseEventHandler } from "react"
 import styled from "styled-components"
 import { ChevronUp } from "@styled-icons/boxicons-regular/ChevronUp"
 import * as style from "../../variables/Variables"
@@ -21,7 +22,12 @@ const StyledButtonContainer = styled(ChevronUp)`
   }
 `
 
-const SecondaryButton = ({ className, secondaryButtonClick }) => {
+interface InterfaceSecondaryButton {
+  className?: any
+  secondaryButtonClick?: MouseEventHandler<SVGSVGElement>
+}
+
+const SecondaryButton: FunctionComponent<InterfaceSecondaryButton> = ({ className, secondaryButtonClick }) => {
   return <StyledButtonContainer onClick={secondaryButtonClick} className={className} />
 }
 

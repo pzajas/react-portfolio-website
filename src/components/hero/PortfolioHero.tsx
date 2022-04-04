@@ -2,7 +2,7 @@ import styled from "styled-components"
 import PrimaryButton from "../../elements/buttons/PrimaryButton"
 import * as style from "../../variables/Variables"
 
-const StyledHeroContainer = styled.div`
+const StyledHeroContainer = styled.div<{ menuActive: boolean }>`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -65,7 +65,7 @@ const PortfolioHero: React.FC<InterfacePortfolioHero> = ({ menuActive, handleScr
       </StyledHeroText>
 
       <StyledHeroButtonContainer>
-        <PrimaryButton buttonText="See my work" primaryButtonClick={handleScrollToProjects} />
+        <PrimaryButton type="button" buttonText="See my work" primaryButtonClick={handleScrollToProjects} />
       </StyledHeroButtonContainer>
     </StyledHeroContainer>
   )

@@ -1,3 +1,4 @@
+import { FunctionComponent } from "react"
 import PortfolioFormInput from "./PortfolioFormInput"
 import PortfolioFormTextarea from "./PortfolioFormTextarea"
 

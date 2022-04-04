@@ -22,9 +22,9 @@ const StyledPrimaryButtonContainer = styled.p`
 
 interface InterfacePrimaryButton {
   buttonText: string
-  className?: any
-  primaryButtonClick: MouseEventHandler<HTMLParagraphElement>
   type: string
+  className?: any
+  primaryButtonClick?: MouseEventHandler<HTMLParagraphElement>
 }
 
 const PrimaryButton: FunctionComponent<InterfacePrimaryButton> = ({ buttonText, className, primaryButtonClick }) => {

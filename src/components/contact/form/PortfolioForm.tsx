@@ -1,3 +1,4 @@
+import { FunctionComponent } from "react"
 import { Form, Formik } from "formik"
 import styled from "styled-components"
 import * as Yup from "yup"

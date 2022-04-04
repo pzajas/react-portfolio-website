@@ -1,3 +1,4 @@
+import { FunctionComponent } from "react"
 import styled from "styled-components"
 import { Facebook } from "@styled-icons/boxicons-logos/Facebook"
 import { Github } from "@styled-icons/boxicons-logos/Github"
@@ -52,8 +53,20 @@ const StyledIconsContainer = styled.div`
   }
 `
 
-const PortfolioFooter = ({ handleScrollToTheTop }) => {
-  const iconsArray = [{ icon: <Facebook /> }, { icon: <Linkedin /> }, { icon: <Github /> }, { icon: <Linkedin /> }]
+interface InterfacePortfolioFooter {
+  icon: {
+    index: number
+  }
+}
+
+const PortfolioFooter: FunctionComponent<InterfacePortfolioFooter> = () => {
+  const index = Math.random() * 1000
+  const iconsArray = [
+    { icon: <Facebook />, index },
+    { icon: <Linkedin />, index },
+    { icon: <Github />, index },
+    { icon: <Linkedin />, index },
+  ]
 
   return (
     <StyledPortfolioFooter>
@@ -62,7 +75,7 @@ const PortfolioFooter = ({ handleScrollToTheTop }) => {
       </StyledSecondaryButtonContainer> */}
       <StyledIconsContainer>
         {iconsArray.map(icon => (
-          <li key={icon.icon}>{icon.icon}</li>
+          <li key={icon.index}>{icon.icon}</li>
         ))}
       </StyledIconsContainer>
     </StyledPortfolioFooter>

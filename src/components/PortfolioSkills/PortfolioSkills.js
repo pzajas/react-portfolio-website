@@ -2,7 +2,7 @@ import styled from "styled-components"
 import StyledSectionTitle from "../../elements/titles/PrimaryTitle"
 import StyledSecondaryTitle from "../../elements/titles/SecondaryTitle"
 import * as style from "../../variables/Variables"
-import PortfolioSkillsChart from "./PortfolioSkillsChart"
+// import PortfolioSkillsChart from "./PortfolioSkillsChart"
 
 const StyledSkillsContainer = styled.div`
   height: 100vh;
@@ -47,4 +47,4 @@ const PortfolioSkills = () => {
   )
 }
 
-export default PortfolioSkills
+export {}

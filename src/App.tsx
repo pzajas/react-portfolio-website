@@ -2,7 +2,6 @@ import { useEffect, useRef, useState } from "react"
 import { CSSTransition, TransitionGroup } from "react-transition-group"
 import styled from "styled-components"
 import PortfolioPlans from "./components/future/PortfolioPlans"
-import PortfolioSkills from "./components/skills/PortfolioSkills"
 import PortfolioAbout from "./components/about/PortfolioAbout"
 import PortfolioContact from "./components/contact/PortfolioContact"
 import PortfolioFooter from "./components/footer/PortfolioFooter"
@@ -65,6 +64,7 @@ const App = () => {
   const [splashActive, setSplashActive] = useState(true)
 
   const myRef = useRef(null)
+
   const toTheTop = useRef(null)
 
   useEffect(() => {

@@ -1,6 +1,7 @@
 import { FunctionComponent } from "react"
 import { Link } from "react-router-dom"
 import styled from "styled-components"
+import { boolean } from "yup/lib/locale"
 import * as style from "../../variables/Variables"
 
 const StyledNavbarContainer = styled.div`
@@ -22,7 +23,7 @@ const StyledLogoContainer = styled.div`
   }
 `
 
-const StyledLinkContainer = styled.div`
+const StyledLinkContainer = styled.div<{ menuActive: boolean }>`
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -64,7 +65,7 @@ const StyledNavbarLink = styled(Link)`
   }
 `
 
-const StyledHamburgerContainer = styled.div`
+const StyledHamburgerContainer = styled.div<{ menuActive: boolean }>`
   display: flex;
   flex-direction: column;
   gap: 0.3rem;

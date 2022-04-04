@@ -30,7 +30,7 @@ const StyledLabel = styled.div`
   padding-right: 0.2rem;
 `
 
-const StyledDiv = styled.div`
+const StyledDiv = styled.div<{ percent: number }>`
   display: flex;
   justify-content: center;
   align-items: center;
