@@ -1,3 +1,5 @@
+import { FunctionComponent } from "react"
+
 import styled from "styled-components"
 
 const StyledSectionTitle = styled.h1`
@@ -7,7 +9,12 @@ const StyledSectionTitle = styled.h1`
   color: white;
 `
 
-const SecondaryTitle = ({ secondarySectionText, className }) => {
+interface InterfaceSecondaryTitle {
+  secondarySectionText: string
+  className?: any
+}
+
+const SecondaryTitle: FunctionComponent<InterfaceSecondaryTitle> = ({ secondarySectionText, className }) => {
   return <StyledSectionTitle className={className}>{secondarySectionText}</StyledSectionTitle>
 }
 

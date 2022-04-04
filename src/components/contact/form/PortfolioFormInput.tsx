@@ -34,7 +34,14 @@ const StyledPortfolioField = styled(Field)`
   }
 `
 
-const PortfolioFormInput = props => {
+interface Props {
+  props: {
+    label: string
+    name: string
+  }
+}
+
+const PortfolioFormInput = ({ props }: Props) => {
   const { label, name, ...rest } = props
   return (
     <StyledPortfolioFormInputContainer>

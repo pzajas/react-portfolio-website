@@ -1,3 +1,4 @@
+import { FunctionComponent } from "react"
 import * as style from "../../variables/Variables"
 import styled from "styled-components"
 
@@ -37,7 +38,13 @@ const StyledCardParagraph = styled.p`
   margin-bottom: 2rem;
 `
 
-const PortfolioOfferCard = ({ icon, title, paragraph }) => {
+interface InterfacePortfolioOfferCard {
+  icon: JSX.Element
+  title: string
+  paragraph: string
+}
+
+const PortfolioOfferCard: FunctionComponent<InterfacePortfolioOfferCard> = ({ icon, title, paragraph }) => {
   return (
     <StyledCardContainer>
       <StyledIcon>{icon}</StyledIcon>

@@ -1,3 +1,4 @@
+import { FunctionComponent } from "react"
 import styled from "styled-components"
 import { CodeSquare } from "@styled-icons/bootstrap/CodeSquare"
 import { FilterSquare } from "@styled-icons/bootstrap/FilterSquare"
@@ -21,8 +22,20 @@ const StyledOfferContainer = styled.div`
   scroll-snap-align: start;
 `
 
-const PortfolioOffer = () => {
-  const portfolioOffersArray = [
+// interface InterfacePortfolioOffer {
+//   icon: JSX.Element
+//   title: string
+//   paragraph: string
+// }
+
+interface PortfolioOffersArray {
+  icon: JSX.Element
+  title: string
+  paragraph: string
+}
+
+const PortfolioOffer: FunctionComponent = () => {
+  const portfolioOffersArray: Array<PortfolioOffersArray> = [
     {
       icon: <CodeSquare />,
       title: "Clean",

@@ -1,6 +1,6 @@
 import { FunctionComponent } from "react"
+import img1 from "../../assets/img1.jpg"
 import SecondaryTitle from "../../elements/titles/SecondaryTitle"
-import img2 from "../../assets/img2.jpg"
 import PrimaryButton from "../../elements/buttons/PrimaryButton"
 import { ReactLogo } from "@styled-icons/fa-brands/ReactLogo"
 import * as style from "../../variables/Variables"
@@ -87,7 +87,7 @@ const PortfolioProjectsCard: FunctionComponent<InterfacePortfolioProjectsCard> =
         <StyledSecondaryTitle secondarySectionText="Learn More" />
         <StyledSecondaryTitle secondarySectionText={name} />
         <StyledP>{description}</StyledP>
-        <StyledPortfolioProjectsCardButton buttonText="Visit" />
+        <StyledPortfolioProjectsCardButton type="button" buttonText="Visit" />
       </StyledPortfolioCardMoreInfo>
     </StyledPortfolioProjectsCardContainer>
   )
