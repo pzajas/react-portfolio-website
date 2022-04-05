@@ -1,3 +1,4 @@
+import { FunctionComponent } from "react"
 import { Field, ErrorMessage } from "formik"
 import styled from "styled-components"
 
@@ -36,13 +37,14 @@ const StyledPortfolioField = styled(Field)`
 
 interface Props {
   props: {
+    control: string
     label: string
     name: string
   }
 }
 
 const PortfolioFormInput = ({ props }: Props) => {
-  const { label, name, ...rest } = props
+  const { control, label, name, ...rest } = props
   return (
     <StyledPortfolioFormInputContainer>
       <label htmlFor={name}>{label}</label>

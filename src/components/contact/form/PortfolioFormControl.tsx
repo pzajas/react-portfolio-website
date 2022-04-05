@@ -2,18 +2,64 @@ import { FunctionComponent } from "react"
 import PortfolioFormInput from "./PortfolioFormInput"
 import PortfolioFormTextarea from "./PortfolioFormTextarea"
 
-const PortfolioFormControl = props => {
-  const { control, ...rest } = props
+interface Props {
+  props: {
+    control: any
+    label: any
+    name: any
+  }
+}
+
+const PortfolioFormControl = ({ props }: Props) => {
+  const { control, label, name, ...rest } = props
+
+  console.log(control)
 
   switch (control) {
     case "name":
-      return <PortfolioFormInput {...rest} />
+      return (
+        <PortfolioFormInput
+          props={{
+            control: "",
+            label: "",
+            name: "",
+          }}
+          {...rest}
+        />
+      )
     case "email":
-      return <PortfolioFormInput {...rest} />
+      return (
+        <PortfolioFormInput
+          props={{
+            control: "",
+            label: "",
+            name: "",
+          }}
+          {...rest}
+        />
+      )
     case "phone":
-      return <PortfolioFormInput {...rest} />
+      return (
+        <PortfolioFormInput
+          props={{
+            control: "",
+            label: "",
+            name: "",
+          }}
+          {...rest}
+        />
+      )
     case "textarea":
-      return <PortfolioFormTextarea {...rest} />
+      return (
+        <PortfolioFormTextarea
+          props={{
+            control: "",
+            label: "",
+            name: "",
+          }}
+          {...rest}
+        />
+      )
     default:
       return null
   }

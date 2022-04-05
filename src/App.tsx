@@ -63,9 +63,9 @@ const App = () => {
   const [menuActive, setMenuActive] = useState(false)
   const [splashActive, setSplashActive] = useState(true)
 
-  const myRef = useRef(null)
+  const myRef = useRef<HTMLDivElement>(null)
 
-  const toTheTop = useRef(null)
+  const toTheTop = useRef<null | HTMLParagraphElement>(null)
 
   useEffect(() => {
     setTimeout(() => {
@@ -91,8 +91,9 @@ const App = () => {
     { name: <PortfolioOffer /> },
     { name: <PortfolioPlans /> },
     { name: <PortfolioAbout /> },
+    // @ts-ignore: Object is possibly 'null'.
     { name: <PortfolioProjects myRef={myRef} /> },
-    { name: <PortfolioContact /> },
+    // { name: <PortfolioContact /> },
     { name: <PortfolioFooter handleScrollToTheTop={handleScrollToTheTop} /> },
   ]
 

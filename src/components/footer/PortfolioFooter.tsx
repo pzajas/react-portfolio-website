@@ -54,28 +54,29 @@ const StyledIconsContainer = styled.div`
 `
 
 interface InterfacePortfolioFooter {
-  icon: {
-    index: number
-  }
+  handleScrollToTheTop: () => void
 }
 
-const PortfolioFooter: FunctionComponent<InterfacePortfolioFooter> = () => {
-  const index = Math.random() * 1000
-  const iconsArray = [
-    { icon: <Facebook />, index },
-    { icon: <Linkedin />, index },
-    { icon: <Github />, index },
-    { icon: <Linkedin />, index },
+interface InterfaceIconsArray {
+  icon: JSX.Element
+}
+
+const PortfolioFooter: FunctionComponent<InterfacePortfolioFooter> = ({ handleScrollToTheTop }) => {
+  const iconsArray: Array<InterfaceIconsArray> = [
+    { icon: <Facebook /> },
+    { icon: <Linkedin /> },
+    { icon: <Github /> },
+    { icon: <Linkedin /> },
   ]
 
   return (
     <StyledPortfolioFooter>
-      {/* <StyledSecondaryButtonContainer secondaryButtonClick={handleScrollToTheTop}>
+      <StyledSecondaryButtonContainer secondaryButtonClick={handleScrollToTheTop}>
         <SecondaryButton />
-      </StyledSecondaryButtonContainer> */}
+      </StyledSecondaryButtonContainer>
       <StyledIconsContainer>
-        {iconsArray.map(icon => (
-          <li key={icon.index}>{icon.icon}</li>
+        {iconsArray.map((icon, index) => (
+          <li key={index}>{icon.icon}</li>
         ))}
       </StyledIconsContainer>
     </StyledPortfolioFooter>
