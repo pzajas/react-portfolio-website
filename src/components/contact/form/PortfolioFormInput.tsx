@@ -36,15 +36,11 @@ const StyledPortfolioField = styled(Field)`
 `
 
 interface Props {
-  props: {
-    control: string
-    label: string
-    name: string
-  }
+  label: string
+  name: string
 }
 
-const PortfolioFormInput = ({ props }: Props) => {
-  const { control, label, name, ...rest } = props
+const PortfolioFormInput = ({ label, name, ...rest }: Props) => {
   return (
     <StyledPortfolioFormInputContainer>
       <label htmlFor={name}>{label}</label>

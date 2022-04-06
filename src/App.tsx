@@ -93,7 +93,7 @@ const App = () => {
     { name: <PortfolioAbout /> },
     // @ts-ignore: Object is possibly 'null'.
     { name: <PortfolioProjects myRef={myRef} /> },
-    // { name: <PortfolioContact /> },
+    { name: <PortfolioContact /> },
     { name: <PortfolioFooter handleScrollToTheTop={handleScrollToTheTop} /> },
   ]
 

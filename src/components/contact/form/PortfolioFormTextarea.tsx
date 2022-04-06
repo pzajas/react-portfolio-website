@@ -29,15 +29,11 @@ const StyledPortfolioFormAreaContainer = styled.div`
 `
 
 interface Props {
-  props: {
-    control: string
-    label: string
-    name: string
-  }
+  label: string
+  name: string
 }
 
-const PortfolioFormTextarea = ({ props }: Props) => {
-  const { control, label, name, ...rest } = props
+const PortfolioFormTextarea = ({ label, name, ...rest }: Props) => {
   return (
     <StyledPortfolioFormAreaContainer>
       <label htmlFor="name">{label}</label>
