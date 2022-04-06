@@ -71,10 +71,10 @@ const PortfolioForm = () => {
     <Formik initialValues={initialValues} validationSchema={validationSchema} onSubmit={onSubmit}>
       {formik => (
         <StyledFormContainer>
-          {/* <StyledPortfolioFormControlInput control="name" label="Name" name="name" />
+          <StyledPortfolioFormControlInput control="name" label="Name" name="name" />
           <StyledPortfolioFormControlInput control="email" label="Email" name="email" />
           <StyledPortfolioFormControlInput control="phone" label="Phone" name="phone" />
-          <StyledPortfolioFormControlArea control="textarea" label="Message" name="textarea" /> */}
+          <StyledPortfolioFormControlArea control="textarea" label="Message" name="textarea" />
           <StyledPrimaryButton type="submit" buttonText="Submit">
             Submit
           </StyledPrimaryButton>
