@@ -7,17 +7,18 @@ const StyledCardContainer = styled.div`
   flex-direction: column;
   align-items: center;
   width: 7rem;
+  background-color: pink;
 
   & * {
     margin: 0;
   }
 
   &:nth-child(odd) {
-    padding: 0rem 0rem 0rem 1rem;
+    margin: 0rem 0rem 0rem 1rem;
   }
 
   &:nth-child(even) {
-    padding: 0rem 1rem 0rem 0rem;
+    margin: 0rem 1rem 0rem 0rem;
   }
 `
 
