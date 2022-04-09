@@ -14,11 +14,28 @@ const StyledOfferContainer = styled.div`
   height: calc(100vh - 4rem);
   background-color: ${style.PrimaryColor};
   color: ${style.TeriaryColor};
-  align-items: center;
-  text-align: center;
+  /* align-items: center;
+  text-align: center; */
   margin-bottom: ${style.PrimaryMarginBottom};
   padding: 2rem 2rem 2rem 2rem;
   scroll-snap-align: start;
+
+  div {
+    display: flex;
+    flex-wrap: wrap;
+    height: 80vh;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  li {
+    display: flex;
+    flex-direction: column;
+    width: 7rem;
+    height: calc(40vh - 1rem);
+    list-style: none;
+    margin-bottom: 2rem;
+  }
 `
 
 const StyledPortfolioSectionTitle = styled(PrimaryTitle)`
@@ -57,9 +74,13 @@ const PortfolioOffer: FunctionComponent = () => {
   return (
     <StyledOfferContainer>
       <StyledPortfolioSectionTitle primarySectionText="What can I offer ?" />
-      {portfolioOffersArray.map(({ icon, title, paragraph }) => (
-        <PortfolioOfferCard key={title} icon={icon} title={title} paragraph={paragraph} />
-      ))}
+      <div>
+        {portfolioOffersArray.map(({ icon, title, paragraph }) => (
+          <li key={title}>
+            <PortfolioOfferCard icon={icon} title={title} paragraph={paragraph} />
+          </li>
+        ))}
+      </div>
     </StyledOfferContainer>
   )
 }
