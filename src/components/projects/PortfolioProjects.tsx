@@ -134,8 +134,8 @@ const PortfolioProjects: FunctionComponent<InterfacePortfolioProjects> = ({ myRe
         speed={1500}
         spaceBetween={10}
       >
-        {projectImages.map(projectImage => (
-          <SwiperSlide>
+        {projectImages.map((projectImage, index) => (
+          <SwiperSlide key={index}>
             <StyledWrapper>{projectImage.image}</StyledWrapper>
           </SwiperSlide>
         ))}
