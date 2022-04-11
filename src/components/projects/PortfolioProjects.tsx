@@ -10,8 +10,9 @@ import StyledSecondarySectionTitle from "../../elements/titles/SecondaryTitle"
 import PortfolioSkills from "../skills/PortfolioSkills"
 import * as style from "../../variables/Variables"
 import PortfolioProjectsCard from "./PortfolioProjectsCard"
+import PrimaryLayout from "../../elements/layouts/PrimaryLayout"
 
-const StyledProjectsContainer = styled.div`
+const StyledPrimaryLayout = styled(PrimaryLayout)`
   display: flex;
   flex-direction: column;
   justify-content: left;
@@ -118,7 +119,7 @@ const PortfolioProjects: FunctionComponent<InterfacePortfolioProjects> = ({ myRe
   ]
 
   return (
-    <StyledProjectsContainer ref={myRef}>
+    <StyledPrimaryLayout ref={myRef}>
       <StyledPrimarySectionTitle primarySectionText="My recent projects!"></StyledPrimarySectionTitle>
       <StyledSwiper
         modules={[EffectFade, Pagination, Navigation, Autoplay]}
@@ -140,7 +141,7 @@ const PortfolioProjects: FunctionComponent<InterfacePortfolioProjects> = ({ myRe
           </SwiperSlide>
         ))}
       </StyledSwiper>
-    </StyledProjectsContainer>
+    </StyledPrimaryLayout>
   )
 }
 

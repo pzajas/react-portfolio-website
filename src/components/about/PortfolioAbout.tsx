@@ -1,23 +1,13 @@
 import styled from "styled-components"
 import StyledSectionTitle from "../../elements/titles/PrimaryTitle"
 import * as style from "../../variables/Variables"
+import PrimaryLayout from "../../elements/layouts/PrimaryLayout"
 
-const StyledAboutContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: left;
-  height: 100vh;
-  background-color: ${style.PrimaryColor};
-  color: ${style.TeriaryColor};
-
-  margin-bottom: ${style.PrimaryMarginBottom};
-  padding: 2rem;
-  scroll-snap-align: start;
-`
+const StyledPrimaryLayout = styled(PrimaryLayout)``
 
 const PortfolioAbout = () => {
   return (
-    <StyledAboutContainer>
+    <StyledPrimaryLayout>
       <StyledSectionTitle primarySectionText={"About myself!"}></StyledSectionTitle>
       <div>
         Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
@@ -27,7 +17,7 @@ const PortfolioAbout = () => {
         Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
         of Lorem Ipsum.
       </div>
-    </StyledAboutContainer>
+    </StyledPrimaryLayout>
   )
 }
 
