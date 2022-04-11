@@ -6,7 +6,7 @@ import { Udemy } from "@styled-icons/simple-icons/Udemy"
 const StyledPlansContainer = styled.div`
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  height: calc(100vh - 4rem);
   background-color: ${style.PrimaryColor};
   /* color: ${style.TeriaryColor};
   align-items: center;
@@ -17,15 +17,17 @@ const StyledPlansContainer = styled.div`
   scroll-snap-align: start;
 
   div {
-    height: 77%;
+    height: calc(100vh - 7rem);
   }
 
   li {
     list-style: none;
     width: 100%;
-    height: 20%;
-    background-color: rgba(255, 255, 255, 0.01);
-    margin-bottom: 0.5rem;
+    height: calc((100vh - 7rem) / 5);
+
+    /* background-color: rgba(255, 255, 255, 0.01); */
+    background-color: pink;
+    /* margin-bottom: 0.5rem; */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -40,7 +42,6 @@ const StyledPlansContainer = styled.div`
 const StyledPrimaryTitle = styled(PrimaryTitle)`
   margin-bottom: 1rem;
   padding: 0;
-  /* height: calc(100vh - 1rem); */
 `
 
 const StyledUdemyIcon = styled(Udemy)`
