@@ -7,19 +7,9 @@ import PrimaryTitle from "../../elements/titles/PrimaryTitle"
 import * as style from "../../variables/Variables"
 import styled from "styled-components"
 import PortfolioOfferCard from "./PortfolioOfferCard"
+import PrimaryLayout from "../../elements/layouts/PrimaryLayout"
 
-const StyledOfferContainer = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  height: calc(100vh - 4rem);
-  background-color: ${style.PrimaryColor};
-  color: ${style.TeriaryColor};
-  /* align-items: center;
-  text-align: center; */
-  margin-bottom: ${style.PrimaryMarginBottom};
-  padding: 2rem 2rem 2rem 2rem;
-  scroll-snap-align: start;
-
+const StyledPrimaryLayout = styled(PrimaryLayout)`
   div {
     display: flex;
     flex-wrap: wrap;
@@ -38,9 +28,7 @@ const StyledOfferContainer = styled.div`
   }
 `
 
-const StyledPortfolioSectionTitle = styled(PrimaryTitle)`
-  margin-bottom: 1rem;
-`
+const StyledPortfolioSectionTitle = styled(PrimaryTitle)``
 
 interface PortfolioOffersArray {
   icon: JSX.Element
@@ -72,7 +60,7 @@ const PortfolioOffer: FunctionComponent = () => {
     },
   ]
   return (
-    <StyledOfferContainer>
+    <StyledPrimaryLayout>
       <StyledPortfolioSectionTitle primarySectionText="What can I offer ?" />
       <div>
         {portfolioOffersArray.map(({ icon, title, paragraph }) => (
@@ -81,7 +69,7 @@ const PortfolioOffer: FunctionComponent = () => {
           </li>
         ))}
       </div>
-    </StyledOfferContainer>
+    </StyledPrimaryLayout>
   )
 }
 

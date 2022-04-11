@@ -2,24 +2,9 @@ import PrimaryTitle from "../../elements/titles/PrimaryTitle"
 import * as style from "../../variables/Variables"
 import styled from "styled-components"
 import { Udemy } from "@styled-icons/simple-icons/Udemy"
+import PrimaryLayout from "../../elements/layouts/PrimaryLayout"
 
-const StyledPlansContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  height: calc(100vh - 4rem);
-  background-color: ${style.PrimaryColor};
-  /* color: ${style.TeriaryColor};
-  align-items: center;
-  text-align: center;
-  justify-content: center;
-  margin-bottom: ${style.PrimaryMarginBottom}; */
-  padding: 2rem;
-  scroll-snap-align: start;
-
-  div {
-    height: calc(100vh - 7rem);
-  }
-
+const StyledPrimaryLayout = styled(PrimaryLayout)`
   li {
     list-style: none;
     width: 100%;
@@ -32,29 +17,23 @@ const StyledPlansContainer = styled.div`
     justify-content: space-between;
     align-items: center;
   }
-
   p {
+    margin: 0;
     padding: 0.2rem;
     color: white;
   }
 `
 
 const StyledPrimaryTitle = styled(PrimaryTitle)`
-  margin-bottom: 1rem;
   padding: 0;
 `
 
 const StyledUdemyIcon = styled(Udemy)`
   padding: 0.2rem;
-  margin-right: 0.5rem;
-  width: 2rem;
+  /* margin-right: 0.5rem; */
+  width: 4rem;
   color: ${style.SecondaryColor};
   background-color: rgba(215, 215, 215, 0.02);
-`
-
-const StyledUdemyIconContainer = styled.div`
-  height: 100%;
-  display: flex;
 `
 
 const PortfolioPlans = () => {
@@ -67,17 +46,17 @@ const PortfolioPlans = () => {
   ]
 
   return (
-    <StyledPlansContainer>
+    <StyledPrimaryLayout>
       <StyledPrimaryTitle primarySectionText="My future plans" />
-      <div>
+      <>
         {portfolioPlansArray.map((item, index) => (
           <li key={index}>
-            <StyledUdemyIconContainer>{item.icon}</StyledUdemyIconContainer>
+            <>{item.icon}</>
             <p>job, gain knowledge, youtube channel, black belt codewars, udemy courses,</p>
           </li>
         ))}
-      </div>
-    </StyledPlansContainer>
+      </>
+    </StyledPrimaryLayout>
   )
 }
 
