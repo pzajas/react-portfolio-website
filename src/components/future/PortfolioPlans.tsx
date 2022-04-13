@@ -8,19 +8,23 @@ const StyledPrimaryLayout = styled(PrimaryLayout)`
   li {
     list-style: none;
     width: 100%;
-    height: calc((100vh - 7rem) / 5);
-
-    /* background-color: rgba(255, 255, 255, 0.01); */
-    background-color: pink;
-    /* margin-bottom: 0.5rem; */
+    height: calc((100vh - 9.5rem) / 5);
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border: solid 1px rgba(255, 255, 255, 0.02);
+
+    &:not(:last-child) {
+      margin-bottom: 0.8rem;
+    }
   }
+
   p {
-    margin: 0;
-    padding: 0.2rem;
+    padding: 0rem 0.5rem 0rem 0.5rem;
     color: white;
+    font-size: 0.7rem;
+    text-align: justify;
+    text-justify: inter-word;
   }
 `
 
@@ -29,9 +33,10 @@ const StyledPrimaryTitle = styled(PrimaryTitle)`
 `
 
 const StyledUdemyIcon = styled(Udemy)`
-  padding: 0.2rem;
+  padding: 0.5rem;
+  height: 4rem;
   /* margin-right: 0.5rem; */
-  width: 4rem;
+  width: 6rem;
   color: ${style.SecondaryColor};
   background-color: rgba(215, 215, 215, 0.02);
 `
@@ -52,7 +57,10 @@ const PortfolioPlans = () => {
         {portfolioPlansArray.map((item, index) => (
           <li key={index}>
             <>{item.icon}</>
-            <p>job, gain knowledge, youtube channel, black belt codewars, udemy courses,</p>
+            <p>
+              The most important thing to get is of course a job. Thanks to this sole one thing I will be able to hone
+              my skills even more and learn best practices.
+            </p>
           </li>
         ))}
       </>
