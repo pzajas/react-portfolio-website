@@ -1,8 +1,11 @@
 import PrimaryTitle from "../../elements/titles/PrimaryTitle"
-import * as style from "../../variables/Variables"
-import styled from "styled-components"
-import { Udemy } from "@styled-icons/simple-icons/Udemy"
 import PrimaryLayout from "../../elements/layouts/PrimaryLayout"
+import styled from "styled-components"
+
+import * as style from "../../variables/Variables"
+
+import { Udemy } from "@styled-icons/simple-icons/Udemy"
+import PortfolioPlansCard from "./PortfolioPlansCard"
 
 const StyledPrimaryLayout = styled(PrimaryLayout)`
   li {
@@ -18,14 +21,6 @@ const StyledPrimaryLayout = styled(PrimaryLayout)`
       margin-bottom: 0.8rem;
     }
   }
-
-  p {
-    padding: 0rem 0.5rem 0rem 0.5rem;
-    color: white;
-    font-size: 0.7rem;
-    text-align: justify;
-    text-justify: inter-word;
-  }
 `
 
 const StyledPrimaryTitle = styled(PrimaryTitle)`
@@ -35,19 +30,33 @@ const StyledPrimaryTitle = styled(PrimaryTitle)`
 const StyledUdemyIcon = styled(Udemy)`
   padding: 0.5rem;
   height: 4rem;
-  /* margin-right: 0.5rem; */
-  width: 6rem;
+  width: 2rem;
   color: ${style.SecondaryColor};
   background-color: rgba(215, 215, 215, 0.02);
 `
 
 const PortfolioPlans = () => {
   const portfolioPlansArray = [
-    { icon: <StyledUdemyIcon /> },
-    { icon: <StyledUdemyIcon /> },
-    { icon: <StyledUdemyIcon /> },
-    { icon: <StyledUdemyIcon /> },
-    { icon: <StyledUdemyIcon /> },
+    {
+      icon: <StyledUdemyIcon />,
+      text: "jobjobjo bjobjobjo jobjobj. jobjobjo bjobjobjo jobjobj bjobjobj bjo jobj",
+    },
+    {
+      icon: <StyledUdemyIcon />,
+      text: "jobjobjo bjobjobjo jobjobj. jobjobjo bjobjobjo jobjobj bjobjobj bjo jobj",
+    },
+    {
+      icon: <StyledUdemyIcon />,
+      text: "jobjobjo bjobjobjo jobjobj. jobjobjo bjobjobjo jobjobj bjobjobj bjo jobj",
+    },
+    {
+      icon: <StyledUdemyIcon />,
+      text: "jobjobjo bjobjobjo jobjobj. jobjobjo bjobjobjo jobjobj bjobjobj bjo jobj",
+    },
+    {
+      icon: <StyledUdemyIcon />,
+      text: "jobjobjo bjobjobjo jobjobj. jobjobjo bjobjobjo jobjobj bjobjobj bjo jobj",
+    },
   ]
 
   return (
@@ -56,11 +65,7 @@ const PortfolioPlans = () => {
       <>
         {portfolioPlansArray.map((item, index) => (
           <li key={index}>
-            <>{item.icon}</>
-            <p>
-              The most important thing to get is of course a job. Thanks to this sole one thing I will be able to hone
-              my skills even more and learn best practices.
-            </p>
+            <PortfolioPlansCard icon={item.icon} text={item.text} />
           </li>
         ))}
       </>
