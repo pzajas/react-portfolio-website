@@ -1,21 +1,36 @@
 import styled from "styled-components"
 import StyledSectionTitle from "../../elements/titles/PrimaryTitle"
-import * as style from "../../variables/Variables"
 import PrimaryLayout from "../../elements/layouts/PrimaryLayout"
+import PortfolioSkills from "../skills/PortfolioSkills"
 
-const StyledPrimaryLayout = styled(PrimaryLayout)``
+const StyledPrimaryLayout = styled(PrimaryLayout)`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  p {
+    margin-bottom: 1rem;
+  }
+`
 
 const PortfolioAbout = () => {
   return (
     <StyledPrimaryLayout>
-      <StyledSectionTitle primarySectionText={"About myself!"}></StyledSectionTitle>
       <div>
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
-        standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
-        a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
-        remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
-        Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
-        of Lorem Ipsum.
+        <StyledSectionTitle primarySectionText={"About myself!"}></StyledSectionTitle>
+        <p>
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+          standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to
+          make a type specimen book. It has survived not only five centuries, but also the leap into electronic
+          typesetting, remaining essentially unchanged. make a type specimen book. It has survived not only five
+          centuries, but also the leap into electronic typesetting, remaining essentially unchanged. make a type
+          specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
+          remaining essentially unchanged.
+        </p>
+      </div>
+
+      <div>
+        <StyledSectionTitle primarySectionText={"My skills!"}></StyledSectionTitle>
+        <PortfolioSkills />
       </div>
     </StyledPrimaryLayout>
   )
