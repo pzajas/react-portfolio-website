@@ -10,7 +10,6 @@ import PortfolioNavbar from "./components/navbar/PortfolioNavbar"
 import PortfolioOffer from "./components/offer/PortfolioOffer"
 import PortfolioProjects from "./components/projects/PortfolioProjects"
 import PortfolioSplash from "./components/splash/PortfolioSplash"
-import PortfolioSkills from "./components/skills/PortfolioSkills"
 
 const StyledWebsiteContainer = styled.div`
   padding: 0;
