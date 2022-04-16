@@ -7,10 +7,16 @@ const StyledPortfolioPlansCard = styled.div`
   justify-content: center;
   align-items: center;
 
+  div {
+    & * {
+      width: 2rem;
+    }
+  }
+
   p {
-    padding: 0rem 0.5rem 0rem 0.5rem;
+    padding: 1rem;
     color: white;
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     text-align: justify;
     text-justify: inter-word;
   }
@@ -25,7 +31,7 @@ interface Props {
 const PortfolioPlansCard = ({ icon, text, className }: Props) => {
   return (
     <StyledPortfolioPlansCard className={className}>
-      {icon}
+      <div>{icon}</div>
       <p>{text}</p>
     </StyledPortfolioPlansCard>
   )

@@ -18,7 +18,7 @@ const StyledPrimaryLayout = styled(PrimaryLayout)`
     border: solid 1px rgba(255, 255, 255, 0.02);
 
     &:not(:last-child) {
-      margin-bottom: 0.8rem;
+      margin-bottom: 0.6rem;
     }
   }
 `
@@ -39,23 +39,23 @@ const PortfolioPlans = () => {
   const portfolioPlansArray = [
     {
       icon: <StyledUdemyIcon />,
-      text: "jobjobjo bjobjobjo jobjobj. jobjobjo bjobjobjo jobjobj bjobjobj bjo jobj",
+      text: "To be honest, right now my primary objective is to find a good job - a place where I'd be able to hone my skills even more and learn the best coding practices.",
     },
     {
       icon: <StyledUdemyIcon />,
-      text: "jobjobjo bjobjobjo jobjobj. jobjobjo bjobjobjo jobjobj bjobjobj bjo jobj",
+      text: "The second most importatnt thing is my development. I always try to find and implement some new ways to address the issues I meet during coding.",
     },
     {
       icon: <StyledUdemyIcon />,
-      text: "jobjobjo bjobjobjo jobjobj. jobjobjo bjobjobjo jobjobj bjobjobj bjo jobj",
+      text: "When I'm skilled enough I think I'd be able to enter the world of youtube and create my own channel in order to spread my knowledge and help others.",
     },
     {
       icon: <StyledUdemyIcon />,
-      text: "jobjobjo bjobjobjo jobjobj. jobjobjo bjobjobjo jobjobj bjobjobj bjo jobj",
+      text: "I know that youtube is not the only platform I can share my ideas on so I think about doing some udemy courses. This, however, is not a piece of cake. We will see.",
     },
     {
       icon: <StyledUdemyIcon />,
-      text: "jobjobjo bjobjobjo jobjobj. jobjobjo bjobjobjo jobjobj bjobjobj bjo jobj",
+      text: "Life does not comprise of coding only. I want to shape both my body and mind. Therefeore, I've recently started some hard workout to gain some more physical strength.",
     },
   ]
 
