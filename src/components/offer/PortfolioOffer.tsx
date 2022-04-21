@@ -1,13 +1,13 @@
 import { FunctionComponent } from "react"
-import { CodeSquare } from "@styled-icons/bootstrap/CodeSquare"
-import { FilterSquare } from "@styled-icons/bootstrap/FilterSquare"
-import { PlusSquare } from "@styled-icons/bootstrap/PlusSquare"
-import { SlashSquare } from "@styled-icons/bootstrap/SlashSquare"
 import PrimaryTitle from "../../elements/titles/PrimaryTitle"
-import * as style from "../../variables/Variables"
 import styled from "styled-components"
 import PortfolioOfferCard from "./PortfolioOfferCard"
 import PrimaryLayout from "../../elements/layouts/PrimaryLayout"
+
+import { DesignIdeas } from "@styled-icons/fluentui-system-regular/DesignIdeas"
+import { Droplet } from "@styled-icons/bootstrap/Droplet"
+import { ApprovalsApp } from "@styled-icons/fluentui-system-filled/ApprovalsApp"
+import { Tablet } from "@styled-icons/bootstrap/Tablet"
 
 const StyledPrimaryLayout = styled(PrimaryLayout)`
   div {
@@ -39,22 +39,22 @@ interface PortfolioOffersArray {
 const PortfolioOffer: FunctionComponent = () => {
   const portfolioOffersArray: Array<PortfolioOffersArray> = [
     {
-      icon: <CodeSquare />,
+      icon: <Droplet />,
       title: "Clean",
       paragraph: "I try to find the optimal way to write the code.",
     },
     {
-      icon: <PlusSquare />,
+      icon: <ApprovalsApp />,
       title: "Reusable",
       paragraph: "My components are the truest components.",
     },
     {
-      icon: <FilterSquare />,
+      icon: <DesignIdeas />,
       title: "Nice Design",
       paragraph: "I have the basic experience in the area of UI/UX.",
     },
     {
-      icon: <SlashSquare />,
+      icon: <Tablet />,
       title: "Responsive",
       paragraph: "Pixel perfect and adjusted for every device.",
     },
