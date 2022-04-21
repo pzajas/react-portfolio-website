@@ -1,6 +1,6 @@
 import PrimaryTitle from "../../elements/titles/PrimaryTitle"
 import PrimaryLayout from "../../elements/layouts/PrimaryLayout"
-import styled from "styled-components"
+import styled, { css } from "styled-components"
 
 import * as style from "../../variables/Variables"
 
@@ -20,7 +20,7 @@ const StyledPrimaryLayout = styled(PrimaryLayout)`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border: solid 1px rgba(255, 255, 255, 0.02);
+    border: solid 1px rgba(255, 255, 255, 0.08);
 
     &:not(:last-child) {
       margin-bottom: 0.6rem;
@@ -32,42 +32,30 @@ const StyledPrimaryTitle = styled(PrimaryTitle)`
   padding: 0;
 `
 
-const StyledWorkOutlineIcon = styled(WorkOutline)`
-  transform: rotate(90deg);
+const iconStyles = css`
   height: 4rem;
   width: 2rem;
   color: ${style.SecondaryColor};
-  /* background-color: rgba(215, 215, 215, 0.02); */
+`
+
+const StyledWorkOutlineIcon = styled(WorkOutline)`
+  ${iconStyles}
 `
 
 const StyledBrainCircuitIcon = styled(BrainCircuit)`
-  /* transform: rotate(90deg); */
-  height: 4rem;
-  width: 2rem;
-  color: ${style.SecondaryColor};
-  /* background-color: rgba(215, 215, 215, 0.02); */
+  ${iconStyles}
 `
 
 const StyledYoutubeIcon = styled(Youtube2)`
-  transform: rotate(-90deg);
-  height: 4rem;
-  width: 2rem;
-  color: ${style.SecondaryColor};
-  /* background-color: rgba(215, 215, 215, 0.02); */
+  ${iconStyles}
 `
 
 const StyledUdemyIcon = styled(Udemy)`
-  height: 4rem;
-  width: 1.8rem;
-  color: ${style.SecondaryColor};
-  /* background-color: rgba(215, 215, 215, 0.02); */
+  ${iconStyles}
 `
 
 const StyledMonitorWeightIcon = styled(MonitorWeight)`
-  height: 4rem;
-  width: 2rem;
-  color: ${style.SecondaryColor};
-  /* background-color: rgba(215, 215, 215, 0.02); */
+  ${iconStyles}
 `
 
 const PortfolioPlans = () => {
