@@ -8,13 +8,12 @@ const StyledPortfolioPlansCard = styled.div`
   align-items: center;
 
   div {
-    & * {
-      width: 2rem;
-    }
+    width: 1.8rem;
+    padding: 1rem;
   }
 
   p {
-    padding: 1rem;
+    padding-right: 0.9rem;
     color: white;
     font-size: 0.7rem;
     text-align: justify;
