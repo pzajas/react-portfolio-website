@@ -1,4 +1,3 @@
-import { FunctionComponent } from "react"
 import { Form, Formik } from "formik"
 import styled from "styled-components"
 import * as Yup from "yup"
@@ -8,14 +7,15 @@ import PrimaryButton from "../../../elements/buttons/PrimaryButton"
 
 const StyledFormContainer = styled(Form)`
   width: 100%;
+  height: 65vh;
   display: flex;
   flex-direction: column;
+  position: relative;
 
   & * {
     display: flex;
     flex-direction: column;
     border: none;
-    /* background-color: steelblue; */
     background-color: rgba(255, 255, 255, 0.01);
     font-size: 0.9rem;
     color: white;
@@ -26,31 +26,19 @@ const StyledFormContainer = styled(Form)`
   }
 `
 
-const Line = styled.div`
-  width: 100%;
-  height: 1px;
-  background-color: rgba(255, 255, 255, 0.7);
-  margin: 0rem 0rem 1rem 0rem;
-  opacity: 0.1;
-`
-
 const StyledPortfolioFormControlInput = styled(PortfolioFormControl)`
   padding: 0.6rem 0rem 0.6rem 0.2rem;
   background-color: transparent;
 `
 
 const StyledPortfolioFormControlArea = styled(PortfolioFormControl)`
-  height: 8rem;
+  height: 6rem;
   padding: 0.6rem 0rem 0.6rem 0.2rem;
   resize: none;
 `
 
 const StyledPrimaryButton = styled(PrimaryButton)`
   width: 22%;
-  padding: 0;
-  margin: 0;
-  border: none;
-  background-color: transparent;
   color: ${style.SecondaryColor};
 `
 
@@ -75,6 +63,7 @@ const PortfolioForm = () => {
           <StyledPortfolioFormControlInput control="email" label="Email" name="email" />
           <StyledPortfolioFormControlInput control="phone" label="Phone" name="phone" />
           <StyledPortfolioFormControlArea control="textarea" label="Message" name="textarea" />
+
           <StyledPrimaryButton type="submit" buttonText="Submit">
             Submit
           </StyledPrimaryButton>

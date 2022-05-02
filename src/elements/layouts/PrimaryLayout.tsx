@@ -7,11 +7,6 @@ const StyledPrimaryLayout = styled.div`
   height: calc(100vh - 4rem);
   background-color: ${style.PrimaryColor};
   color: ${style.TeriaryColor};
-  /* color: ${style.TeriaryColor};
-  align-items: center;
-  text-align: center;
-  justify-content: center;
-  margin-bottom: ${style.PrimaryMarginBottom}; */
   padding: 2rem;
   scroll-snap-align: start;
 `
@@ -21,6 +16,7 @@ interface Props {
   className?: string
 
   ref?: any
+  id?: string
 }
 
 const PrimaryLayout = ({ children, className }: Props) => {

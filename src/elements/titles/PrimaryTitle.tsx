@@ -9,16 +9,16 @@ const StyledSectionTitle = styled.h1`
   color: white;
   height: 2rem;
   display: flex;
-  align-items: center;
+  align-items: top;
   justify-content: left;
 `
 
-interface InterfacePrimaryTitle {
+interface Props {
   primarySectionText: string
   className?: string
 }
 
-const PrimaryTitle: FunctionComponent<InterfacePrimaryTitle> = ({ primarySectionText, className }) => {
+const PrimaryTitle = ({ primarySectionText, className }: Props) => {
   return <StyledSectionTitle className={className}>{primarySectionText}</StyledSectionTitle>
 }
 

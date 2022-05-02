@@ -4,7 +4,7 @@ import { Field, ErrorMessage } from "formik"
 
 const StyledPortfolioFormAreaContainer = styled.div`
   position: relative;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 
   label,
   div {
