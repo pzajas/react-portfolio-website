@@ -1,6 +1,7 @@
 import styled from "styled-components"
 import PrimaryButton from "../../elements/buttons/PrimaryButton"
 import * as style from "../../variables/Variables"
+import ScrollIntoView from "react-scroll-into-view"
 
 const StyledHeroContainer = styled.div<{ menuActive: boolean }>`
   display: flex;
@@ -51,13 +52,12 @@ const StyledHeroButtonContainer = styled.div`
 
 interface InterfacePortfolioHero {
   menuActive: boolean
-  handleScrollToProjects: any
-  className?: any
+  className?: string
 }
 
-const PortfolioHero: React.FC<InterfacePortfolioHero> = ({ menuActive, handleScrollToProjects, className }) => {
+const PortfolioHero: React.FC<InterfacePortfolioHero> = ({ menuActive, className }) => {
   return (
-    <StyledHeroContainer menuActive={menuActive} className={className}>
+    <StyledHeroContainer id="hero" menuActive={menuActive} className={className}>
       <StyledHeroText>
         <h1>
           Hello there!<br></br> I design <span>unique</span> web experience.
@@ -65,7 +65,9 @@ const PortfolioHero: React.FC<InterfacePortfolioHero> = ({ menuActive, handleScr
       </StyledHeroText>
 
       <StyledHeroButtonContainer>
-        <PrimaryButton type="button" buttonText="See my work" primaryButtonClick={handleScrollToProjects} />
+        <ScrollIntoView selector="#projects">
+          <PrimaryButton type="button" buttonText="See my work" />
+        </ScrollIntoView>
       </StyledHeroButtonContainer>
     </StyledHeroContainer>
   )

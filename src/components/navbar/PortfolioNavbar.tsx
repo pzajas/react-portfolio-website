@@ -83,22 +83,16 @@ const StyledHamburgerContainer = styled.div<{ menuActive: boolean }>`
 
 interface InterfacePortfolioNavbar {
   menuActive: boolean
-  toTheTop: React.MutableRefObject<any>
   className?: any
   setMenuActive: React.Dispatch<React.SetStateAction<boolean>>
 }
 
-const PortfolioNavbar: FunctionComponent<InterfacePortfolioNavbar> = ({
-  menuActive,
-  className,
-  toTheTop,
-  setMenuActive,
-}) => {
+const PortfolioNavbar: FunctionComponent<InterfacePortfolioNavbar> = ({ menuActive, className, setMenuActive }) => {
   const handleToggleMenu = () => {
     setMenuActive(!menuActive)
   }
   return (
-    <StyledNavbarContainer ref={toTheTop} className={className}>
+    <StyledNavbarContainer className={className}>
       <StyledLogoContainer>
         <StyledNavbarLink to="/">
           LO<span>GO</span>

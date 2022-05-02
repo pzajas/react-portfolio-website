@@ -61,7 +61,7 @@ const PortfolioOffer: FunctionComponent = () => {
   ]
   return (
     <StyledPrimaryLayout>
-      <StyledPortfolioSectionTitle primarySectionText="What can I offer ?" />
+      <StyledPortfolioSectionTitle primarySectionText="What can I offer?" />
       <div>
         {portfolioOffersArray.map(({ icon, title, paragraph }) => (
           <li key={title}>

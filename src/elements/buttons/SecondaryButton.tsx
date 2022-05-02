@@ -2,6 +2,7 @@ import { FunctionComponent, MouseEventHandler } from "react"
 import styled from "styled-components"
 import { ChevronUp } from "@styled-icons/boxicons-regular/ChevronUp"
 import * as style from "../../variables/Variables"
+import ScrollIntoView from "react-scroll-into-view"
 
 const StyledButtonContainer = styled(ChevronUp)`
   background-color: ${style.SecondaryColor};
@@ -27,8 +28,14 @@ interface InterfaceSecondaryButton {
   secondaryButtonClick?: MouseEventHandler<SVGSVGElement>
 }
 
-const SecondaryButton: FunctionComponent<InterfaceSecondaryButton> = ({ className, secondaryButtonClick }) => {
-  return <StyledButtonContainer onClick={secondaryButtonClick} className={className} />
+const SecondaryButton: FunctionComponent<InterfaceSecondaryButton> = ({ className }) => {
+  return (
+    <div>
+      <ScrollIntoView selector="#hero">
+        <StyledButtonContainer className={className} />
+      </ScrollIntoView>
+    </div>
+  )
 }
 
 export default SecondaryButton

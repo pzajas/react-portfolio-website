@@ -4,7 +4,6 @@ import styled from "styled-components"
 import PortfolioPlans from "./components/future/PortfolioPlans"
 import PortfolioAbout from "./components/about/PortfolioAbout"
 import PortfolioContact from "./components/contact/PortfolioContact"
-import PortfolioFooter from "./components/footer/PortfolioFooter"
 import PortfolioHero from "./components/hero/PortfolioHero"
 import PortfolioNavbar from "./components/navbar/PortfolioNavbar"
 import PortfolioOffer from "./components/offer/PortfolioOffer"
@@ -63,38 +62,22 @@ const App = () => {
   const [menuActive, setMenuActive] = useState(false)
   const [splashActive, setSplashActive] = useState(true)
 
-  const myRef = useRef<HTMLDivElement>(null)
-
-  const toTheTop = useRef<null | HTMLParagraphElement>(null)
-
   useEffect(() => {
     setTimeout(() => {
       setSplashActive(false)
     }, 2000)
   }, [])
 
-  const handleScrollToProjects = () => {
-    // @ts-ignore: Object is possibly 'null'.
-    myRef.current.scrollIntoView()
-  }
-
-  const handleScrollToTheTop = () => {
-    // @ts-ignore: Object is possibly 'null'.
-    toTheTop.current.scrollIntoView()
-  }
-
   const componentsArray = [
-    { name: <StyledPortfolioNavbar toTheTop={toTheTop} menuActive={menuActive} setMenuActive={setMenuActive} /> },
+    { name: <StyledPortfolioNavbar menuActive={menuActive} setMenuActive={setMenuActive} /> },
     {
-      name: <StyledPortfolioHero menuActive={menuActive} handleScrollToProjects={handleScrollToProjects} />,
+      name: <StyledPortfolioHero menuActive={menuActive} />,
     },
     { name: <PortfolioOffer /> },
     { name: <PortfolioPlans /> },
     { name: <PortfolioAbout /> },
-    // @ts-ignore: Object is possibly 'null'.
-    { name: <PortfolioProjects myRef={myRef} /> },
+    { name: <PortfolioProjects /> },
     { name: <PortfolioContact /> },
-    { name: <PortfolioFooter handleScrollToTheTop={handleScrollToTheTop} /> },
   ]
 
   return (

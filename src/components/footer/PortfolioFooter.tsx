@@ -5,12 +5,11 @@ import { Github } from "@styled-icons/boxicons-logos/Github"
 import { Linkedin } from "@styled-icons/boxicons-logos/Linkedin"
 import SecondaryButton from "../../elements/buttons/SecondaryButton"
 import * as style from "../../variables/Variables"
+import ScrollIntoView from "react-scroll-into-view"
 
 const StyledPortfolioFooter = styled.div`
-  height: 25vh;
   color: white;
-  padding: 0 2rem 0 2rem;
-
+  padding: 2rem 0rem;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   position: relative;
 `
@@ -30,7 +29,7 @@ const StyledSecondaryButtonContainer = styled(SecondaryButton)`
 const StyledIconsContainer = styled.div`
   display: flex;
   width: 100%;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   text-align: center;
   height: 100%;
@@ -44,7 +43,7 @@ const StyledIconsContainer = styled.div`
     text-align: center;
 
     & * {
-      width: 1.5rem;
+      width: 1rem;
       padding: 0.7rem;
       margin: 0rem 0.7rem;
       background-color: rgba(255, 255, 255, 0.05);
@@ -54,11 +53,12 @@ const StyledIconsContainer = styled.div`
 `
 
 interface InterfacePortfolioFooter {
-  handleScrollToTheTop: () => void
+  handleScrollToTheTop?: () => void
 }
 
 interface InterfaceIconsArray {
   icon: JSX.Element
+  onClick?: any
 }
 
 const PortfolioFooter: FunctionComponent<InterfacePortfolioFooter> = ({ handleScrollToTheTop }) => {

@@ -87,7 +87,8 @@ const StyledWrapper = styled.div`
 const StyledPortfolioProjectsCard = styled(PortfolioProjectsCard)``
 
 interface InterfacePortfolioProjects {
-  myRef: null
+  myRef?: null
+  id?: any
 }
 
 const PortfolioProjects: FunctionComponent<InterfacePortfolioProjects> = ({ myRef }) => {
@@ -119,7 +120,7 @@ const PortfolioProjects: FunctionComponent<InterfacePortfolioProjects> = ({ myRe
   ]
 
   return (
-    <StyledPrimaryLayout ref={myRef}>
+    <StyledPrimaryLayout>
       <StyledPrimarySectionTitle primarySectionText="My recent projects!"></StyledPrimarySectionTitle>
       <StyledSwiper
         modules={[EffectFade, Pagination, Navigation, Autoplay]}
@@ -137,7 +138,7 @@ const PortfolioProjects: FunctionComponent<InterfacePortfolioProjects> = ({ myRe
       >
         {projectImages.map((projectImage, index) => (
           <SwiperSlide key={index}>
-            <StyledWrapper>{projectImage.image}</StyledWrapper>
+            <StyledWrapper id="projects">{projectImage.image}</StyledWrapper>
           </SwiperSlide>
         ))}
       </StyledSwiper>
