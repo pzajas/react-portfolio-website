@@ -1,6 +1,7 @@
 import { FunctionComponent } from "react"
 import styled from "styled-components"
-import { Facebook } from "@styled-icons/boxicons-logos/Facebook"
+import { EmailOutline } from "@styled-icons/evaicons-outline/EmailOutline"
+import { AlternateEmail } from "@styled-icons/material-rounded/AlternateEmail"
 import { Github } from "@styled-icons/boxicons-logos/Github"
 import { Linkedin } from "@styled-icons/boxicons-logos/Linkedin"
 import SecondaryButton from "../../elements/buttons/SecondaryButton"
@@ -63,10 +64,10 @@ interface InterfaceIconsArray {
 
 const PortfolioFooter: FunctionComponent<InterfacePortfolioFooter> = ({ handleScrollToTheTop }) => {
   const iconsArray: Array<InterfaceIconsArray> = [
-    { icon: <Facebook /> },
+    { icon: <EmailOutline /> },
+    { icon: <AlternateEmail /> },
     { icon: <Linkedin /> },
     { icon: <Github /> },
-    { icon: <Linkedin /> },
   ]
 
   return (

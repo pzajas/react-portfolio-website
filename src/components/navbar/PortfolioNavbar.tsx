@@ -5,18 +5,21 @@ import { boolean } from "yup/lib/locale"
 import * as style from "../../variables/Variables"
 
 const StyledNavbarContainer = styled.div`
-  height: 10vh;
+  /* height: 10vh; */
   background-color: ${style.PrimaryColor};
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 2rem 0 2rem;
+  padding: 1.7rem 2rem 0 2rem;
   scroll-snap-align: start;
 `
 
 const StyledLogoContainer = styled.div`
   font-size: 1.3rem;
   font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  align-items: top;
 
   & span {
     color: ${style.SecondaryColor};
@@ -54,7 +57,7 @@ const StyledNavbarLink = styled(Link)`
   text-decoration: none;
   color: ${style.TeriaryColor};
   background-color: ${style.PrimaryColor};
-  padding-bottom: 0.8rem;
+  /* padding-bottom: 0.8rem; */
 
   cursor: pointer;
 
