@@ -6,11 +6,10 @@ import { Github } from "@styled-icons/boxicons-logos/Github"
 import { Linkedin } from "@styled-icons/boxicons-logos/Linkedin"
 import SecondaryButton from "../../elements/buttons/SecondaryButton"
 import * as style from "../../variables/Variables"
-import ScrollIntoView from "react-scroll-into-view"
 
 const StyledPortfolioFooter = styled.div`
   color: white;
-  padding: 2rem 0rem;
+  padding: 2.4rem 0rem 2rem 0rem;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   position: relative;
 `
@@ -38,7 +37,7 @@ const StyledIconsContainer = styled.div`
   li {
     list-style: none;
     display: flex;
-
+    cursor: pointer;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -46,38 +45,42 @@ const StyledIconsContainer = styled.div`
     & * {
       width: 1rem;
       padding: 0.7rem;
-      margin: 0rem 0.7rem;
       background-color: rgba(255, 255, 255, 0.05);
       color: ${style.TeriaryColor};
     }
   }
 `
 
-interface InterfacePortfolioFooter {
-  handleScrollToTheTop?: () => void
-}
-
 interface InterfaceIconsArray {
   icon: JSX.Element
-  onClick?: any
+  link: string
 }
 
-const PortfolioFooter: FunctionComponent<InterfacePortfolioFooter> = ({ handleScrollToTheTop }) => {
+const PortfolioFooter: FunctionComponent = () => {
+  const LINKEDIN = "https://www.linkedin.com/in/piotr-zajas-65ba971bb/"
+  const GITHUB = "https://github.com/pzajas"
+
+  const openInTheBrowser = (websiteLink: string) => {
+    window.open(websiteLink)
+  }
+
   const iconsArray: Array<InterfaceIconsArray> = [
-    { icon: <EmailOutline /> },
-    { icon: <AlternateEmail /> },
-    { icon: <Linkedin /> },
-    { icon: <Github /> },
+    { icon: <EmailOutline />, link: LINKEDIN },
+    { icon: <AlternateEmail />, link: LINKEDIN },
+    { icon: <Linkedin />, link: LINKEDIN },
+    { icon: <Github />, link: GITHUB },
   ]
 
   return (
     <StyledPortfolioFooter>
-      <StyledSecondaryButtonContainer secondaryButtonClick={handleScrollToTheTop}>
+      <StyledSecondaryButtonContainer>
         <SecondaryButton />
       </StyledSecondaryButtonContainer>
       <StyledIconsContainer>
-        {iconsArray.map((icon, index) => (
-          <li key={index}>{icon.icon}</li>
+        {iconsArray.map((item, index) => (
+          <li onClick={() => openInTheBrowser(item.link)} key={index}>
+            {item.icon}
+          </li>
         ))}
       </StyledIconsContainer>
     </StyledPortfolioFooter>
