@@ -48,7 +48,6 @@ interface Values {
   email: string
   phone: string
   textarea: string
-  type?: "submit" | "reset" | "button"
 }
 
 const PortfolioForm = () => {
