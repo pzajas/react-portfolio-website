@@ -1,9 +1,6 @@
 import { FunctionComponent } from "react"
-import img1 from "../../assets/img1.jpg"
 import SecondaryTitle from "../../elements/titles/SecondaryTitle"
 import PrimaryButton from "../../elements/buttons/PrimaryButton"
-import { ReactLogo } from "@styled-icons/fa-brands/ReactLogo"
-import * as style from "../../variables/Variables"
 
 import styled from "styled-components"
 
@@ -24,9 +21,6 @@ const StyledPortfolioCardMoreInfo = styled.div`
   text-align: left;
   padding: 1rem;
   transition: all 0.5s ease;
-
-  p {
-  }
 
   & * {
     padding: 0rem 0rem 1rem 0rem;

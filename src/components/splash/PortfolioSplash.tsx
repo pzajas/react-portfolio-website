@@ -1,6 +1,5 @@
 import { FunctionComponent } from "react"
 import styled from "styled-components"
-import StyledPrimarySectionTitle from "../../elements/titles/PrimaryTitle"
 import * as style from "../../variables/Variables"
 
 const StyledSplashContainer = styled.div`
@@ -15,7 +14,6 @@ const StyledSplashContainer = styled.div`
   text-align: center;
   align-items: center;
   font-size: 1.5rem;
-  /* font-family: "Montserrat", sans-serif; */
   background-color: ${style.PrimaryColor};
 `
 
