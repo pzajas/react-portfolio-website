@@ -2,7 +2,7 @@ import { MouseEventHandler } from "react"
 import styled from "styled-components"
 import * as style from "../../variables/Variables"
 
-const StyledPrimaryButtonContainer = styled.button`
+const StyledPrimaryButton = styled.button`
   background: none;
   border: none;
   color: ${style.SecondaryColor};
@@ -15,7 +15,7 @@ const StyledPrimaryButtonContainer = styled.button`
   }
 `
 
-interface InterfacePrimaryButton {
+interface Props {
   buttonText: string
   type?: "submit" | "reset" | "button"
   className?: string
@@ -23,11 +23,11 @@ interface InterfacePrimaryButton {
   primaryButtonClick?: MouseEventHandler<HTMLParagraphElement>
 }
 
-const PrimaryButton = ({ buttonText, className }: InterfacePrimaryButton) => {
+const PrimaryButton = ({ buttonText, className }: Props) => {
   return (
-    <StyledPrimaryButtonContainer type="submit" className={className}>
+    <StyledPrimaryButton type="submit" className={className}>
       {buttonText}
-    </StyledPrimaryButtonContainer>
+    </StyledPrimaryButton>
   )
 }
 
