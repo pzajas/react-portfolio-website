@@ -1,6 +1,5 @@
-import { FunctionComponent } from "react"
 import styled from "styled-components"
-import { EmailOutline } from "@styled-icons/evaicons-outline/EmailOutline"
+import { PhoneCallOutline } from "@styled-icons/evaicons-outline/PhoneCallOutline"
 import { AlternateEmail } from "@styled-icons/material-rounded/AlternateEmail"
 import { Github } from "@styled-icons/boxicons-logos/Github"
 import { Linkedin } from "@styled-icons/boxicons-logos/Linkedin"
@@ -56,17 +55,23 @@ interface InterfaceIconsArray {
   link: string
 }
 
-const PortfolioFooter: FunctionComponent = () => {
+const PortfolioFooter = () => {
+  const PHONE = "+48 696 066 620"
+  const EMAIL = "zajas.piotr@gmail.com"
   const LINKEDIN = "https://www.linkedin.com/in/piotr-zajas-65ba971bb/"
   const GITHUB = "https://github.com/pzajas"
 
-  const openInTheBrowser = (websiteLink: string) => {
-    window.open(websiteLink)
+  const openInTheBrowser = (link: string) => {
+    window.open(link)
+  }
+
+  const copyTextToTheClipboard = (text: string) => {
+    navigator.clipboard.writeText(text)
   }
 
   const iconsArray: Array<InterfaceIconsArray> = [
-    { icon: <EmailOutline />, link: LINKEDIN },
-    { icon: <AlternateEmail />, link: LINKEDIN },
+    { icon: <PhoneCallOutline />, link: PHONE },
+    { icon: <AlternateEmail />, link: EMAIL },
     { icon: <Linkedin />, link: LINKEDIN },
     { icon: <Github />, link: GITHUB },
   ]
@@ -78,7 +83,10 @@ const PortfolioFooter: FunctionComponent = () => {
       </StyledSecondaryButtonContainer>
       <StyledIconsContainer>
         {iconsArray.map((item, index) => (
-          <li onClick={() => openInTheBrowser(item.link)} key={index}>
+          <li
+            onClick={index < 2 ? () => copyTextToTheClipboard(item.link) : () => openInTheBrowser(item.link)}
+            key={index}
+          >
             {item.icon}
           </li>
         ))}
