@@ -66,7 +66,7 @@ const PortfolioHero: React.FC<InterfacePortfolioHero> = ({ menuActive, className
 
       <StyledHeroButtonContainer>
         <ScrollIntoView selector="#projects">
-          <PrimaryButton type="button" buttonText="See my work" />
+          <PrimaryButton type="button" buttonText="Projects" />
         </ScrollIntoView>
       </StyledHeroButtonContainer>
     </StyledHeroContainer>
