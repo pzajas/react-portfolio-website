@@ -39,11 +39,18 @@ const StyledPortfolioFormControlArea = styled(PortfolioFormControl)`
 `
 
 const StyledPrimaryButton = styled(PrimaryButton)`
-  width: 2.9rem;
-  font-size: 0.6rem;
-  color: ${style.TeriaryColor};
-  padding: 0.3rem;
-  background-color: rgba(255, 255, 255, 0.05);
+  background: ${style.PrimaryButtonBackgroundColor};
+  border: none;
+  padding: 0.3rem 0.6rem;
+  width: 4.2rem;
+  font-size: 13px;
+  color: ${style.SecondaryColor};
+  transition: all 0.5s ease-in-out;
+
+  &:hover {
+    letter-spacing: 0.05rem;
+    cursor: pointer;
+  }
 `
 
 interface Values {

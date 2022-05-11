@@ -3,11 +3,10 @@ import styled from "styled-components"
 import * as style from "../../variables/Variables"
 
 const StyledPrimaryButton = styled.button`
-  background: none;
+  background: ${style.PrimaryButtonBackgroundColor};
   border: none;
-  padding: 0;
+  padding: 0.3rem 0.6rem;
   color: ${style.SecondaryColor};
-  /* font-size: 1rem; */
   transition: all 0.5s ease-in-out;
 
   &:hover {
