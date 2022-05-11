@@ -5,8 +5,9 @@ import * as style from "../../variables/Variables"
 const StyledPrimaryButton = styled.button`
   background: none;
   border: none;
+  padding: 0;
   color: ${style.SecondaryColor};
-  font-size: 1rem;
+  /* font-size: 1rem; */
   transition: all 0.5s ease-in-out;
 
   &:hover {

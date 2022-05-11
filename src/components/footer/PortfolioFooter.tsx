@@ -46,6 +46,7 @@ const StyledIconsContainer = styled.div`
       padding: 0.7rem;
       background-color: rgba(255, 255, 255, 0.05);
       color: ${style.TeriaryColor};
+      border-radius: 0.2rem;
     }
   }
 `

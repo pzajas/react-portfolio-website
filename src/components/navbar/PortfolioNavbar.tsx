@@ -1,11 +1,10 @@
 import { FunctionComponent } from "react"
 import { Link } from "react-router-dom"
 import styled from "styled-components"
-import { boolean } from "yup/lib/locale"
 import * as style from "../../variables/Variables"
+import { LineHorizontal3 } from "@styled-icons/fluentui-system-filled/LineHorizontal3"
 
 const StyledNavbarContainer = styled.div`
-  /* height: 10vh; */
   background-color: ${style.PrimaryColor};
   display: flex;
   justify-content: space-between;
@@ -68,8 +67,10 @@ const StyledNavbarLink = styled(Link)`
   }
 `
 
-const StyledHamburgerContainer = styled.div<{ menuActive: boolean }>`
+const StyledHamburgerContainer = styled(LineHorizontal3)<{ menuActive: boolean }>`
   display: flex;
+  width: 1.7rem;
+  color: white;
   flex-direction: column;
   gap: 0.3rem;
   transition: all 0.3s ease-in-out;
@@ -106,11 +107,7 @@ const PortfolioNavbar: FunctionComponent<InterfacePortfolioNavbar> = ({ menuActi
         <StyledNavbarLink to="projects">Projects</StyledNavbarLink>
         <StyledNavbarLink to="about">About</StyledNavbarLink>
       </StyledLinkContainer>
-      <StyledHamburgerContainer onClick={handleToggleMenu} menuActive={menuActive}>
-        <div className="first"></div>
-        <div className="second"></div>
-        <div className="third"></div>
-      </StyledHamburgerContainer>
+      <StyledHamburgerContainer onClick={handleToggleMenu} menuActive={menuActive} />
     </StyledNavbarContainer>
   )
 }
