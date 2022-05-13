@@ -6,6 +6,9 @@ import PortfolioFormControl from "./PortfolioFormControl"
 import PrimaryButton from "../../../elements/buttons/PrimaryButton"
 import emailjs from "@emailjs/browser"
 
+import { ToastContainer, toast } from "react-toastify"
+import "react-toastify/dist/ReactToastify.css"
+
 const StyledFormContainer = styled(Form)`
   width: 100%;
   height: 65vh;
@@ -94,13 +97,21 @@ const PortfolioForm = () => {
               )
               .then(
                 result => {
-                  console.log(result.text)
+                  toast("Email has beed delivered successfully!", {
+                    position: "top-right",
+                    autoClose: 5000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    // progress: undefined,
+                  })
                 },
                 error => {
                   console.log(error.text)
                 }
               )
-          }, 500)
+          }, 250)
         }}
       >
         <StyledFormContainer>
@@ -112,6 +123,17 @@ const PortfolioForm = () => {
           <StyledPrimaryButton type="submit" buttonText="Submit" />
         </StyledFormContainer>
       </Formik>
+      <ToastContainer
+      // position="top-center"
+      // autoClose={1000}
+      // hideProgressBar={false}
+      // newestOnTop={false}
+      // closeOnClick
+      // rtl={false}
+      // pauseOnFocusLoss
+      // draggable
+      // pauseOnHover
+      />
     </div>
   )
 }
