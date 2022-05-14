@@ -6,6 +6,9 @@ import { Linkedin } from "@styled-icons/boxicons-logos/Linkedin"
 import SecondaryButton from "../../elements/buttons/SecondaryButton"
 import * as style from "../../variables/Variables"
 
+import { ToastContainer, toast } from "react-toastify"
+import "./Toastify.css"
+
 const StyledPortfolioFooter = styled.div`
   color: white;
   padding: 2.4rem 0rem 2rem 0rem;
@@ -68,6 +71,17 @@ const PortfolioFooter = () => {
 
   const copyTextToTheClipboard = (text: string) => {
     navigator.clipboard.writeText(text)
+
+    toast(text.includes("@") ? "The email address was copied!" : "The phone number was copied", {
+      position: "top-right",
+      autoClose: 1000,
+      hideProgressBar: true,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "dark",
+    })
   }
 
   const iconsArray: Array<InterfaceIconsArray> = [
@@ -92,6 +106,7 @@ const PortfolioFooter = () => {
           </li>
         ))}
       </StyledIconsContainer>
+      <ToastContainer />
     </StyledPortfolioFooter>
   )
 }
