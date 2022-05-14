@@ -5,9 +5,9 @@ import { Github } from "@styled-icons/boxicons-logos/Github"
 import { Linkedin } from "@styled-icons/boxicons-logos/Linkedin"
 import SecondaryButton from "../../elements/buttons/SecondaryButton"
 import * as style from "../../variables/Variables"
-
 import { ToastContainer, toast } from "react-toastify"
-import "./Toastify.css"
+
+import "../../styles/Toastify.css"
 
 const StyledPortfolioFooter = styled.div`
   color: white;
@@ -72,14 +72,11 @@ const PortfolioFooter = () => {
   const copyTextToTheClipboard = (text: string) => {
     navigator.clipboard.writeText(text)
 
-    toast(text.includes("@") ? "The email address was copied!" : "The phone number was copied", {
-      position: "top-right",
-      autoClose: 1000,
+    toast(text.includes("@") ? "The email address was copied!" : "The phone number was copied!", {
+      autoClose: 2000,
       hideProgressBar: true,
-      closeOnClick: true,
+      closeOnClick: false,
       pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
       theme: "dark",
     })
   }
