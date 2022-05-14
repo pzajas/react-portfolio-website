@@ -1,13 +1,12 @@
-import { Form, Formik, Field, FormikHelpers } from "formik"
+import { Form, Formik, FormikHelpers } from "formik"
 import styled from "styled-components"
 import * as Yup from "yup"
 import * as style from "../../../variables/Variables"
 import PortfolioFormControl from "./PortfolioFormControl"
 import PrimaryButton from "../../../elements/buttons/PrimaryButton"
 import emailjs from "@emailjs/browser"
-
 import { ToastContainer, toast } from "react-toastify"
-import "./Toastify.css"
+import "../../../styles/Toastify.css"
 
 const StyledFormContainer = styled(Form)`
   width: 100%;
@@ -98,18 +97,21 @@ const PortfolioForm = () => {
               .then(
                 result => {
                   toast("Email has beed delivered successfully!", {
-                    position: "top-right",
-                    autoClose: 2500,
+                    autoClose: 2000,
                     hideProgressBar: true,
-                    closeOnClick: true,
+                    closeOnClick: false,
                     pauseOnHover: true,
-                    draggable: true,
-                    progress: undefined,
                     theme: "dark",
                   })
                 },
                 error => {
-                  console.log(error.text)
+                  toast("An error occured!", {
+                    autoClose: 2000,
+                    hideProgressBar: true,
+                    closeOnClick: false,
+                    pauseOnHover: true,
+                    theme: "dark",
+                  })
                 }
               )
           }, 10)
@@ -120,21 +122,10 @@ const PortfolioForm = () => {
           <StyledPortfolioFormControlInput control="email" label="Email" name="email" />
           <StyledPortfolioFormControlInput control="phone" label="Phone" name="phone" />
           <StyledPortfolioFormControlArea control="textarea" label="Message" name="textarea" />
-
           <StyledPrimaryButton type="submit" buttonText="Submit" />
         </StyledFormContainer>
       </Formik>
-      <ToastContainer
-      // position="top-center"
-      // autoClose={1000}
-      // hideProgressBar={false}
-      // newestOnTop={false}
-      // closeOnClick
-      // rtl={false}
-      // pauseOnFocusLoss
-      // draggable
-      // pauseOnHover
-      />
+      <ToastContainer />
     </div>
   )
 }
