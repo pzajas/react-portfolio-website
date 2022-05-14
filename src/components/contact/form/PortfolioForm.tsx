@@ -7,7 +7,7 @@ import PrimaryButton from "../../../elements/buttons/PrimaryButton"
 import emailjs from "@emailjs/browser"
 
 import { ToastContainer, toast } from "react-toastify"
-import "react-toastify/dist/ReactToastify.css"
+import "./Toastify.css"
 
 const StyledFormContainer = styled(Form)`
   width: 100%;
@@ -99,19 +99,20 @@ const PortfolioForm = () => {
                 result => {
                   toast("Email has beed delivered successfully!", {
                     position: "top-right",
-                    autoClose: 5000,
-                    hideProgressBar: false,
+                    autoClose: 2500,
+                    hideProgressBar: true,
                     closeOnClick: true,
                     pauseOnHover: true,
                     draggable: true,
-                    // progress: undefined,
+                    progress: undefined,
+                    theme: "dark",
                   })
                 },
                 error => {
                   console.log(error.text)
                 }
               )
-          }, 250)
+          }, 10)
         }}
       >
         <StyledFormContainer>
