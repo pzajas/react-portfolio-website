@@ -1,5 +1,5 @@
 import { Field, ErrorMessage } from "formik"
-import * as style from "../../../variables/Variables"
+import * as style from "../../../styles/General.css"
 import styled from "styled-components"
 
 const StyledPortfolioFormInputContainer = styled.div`
