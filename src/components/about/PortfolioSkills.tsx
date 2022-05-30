@@ -1,4 +1,7 @@
 import styled from "styled-components"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { IconProp } from "@fortawesome/fontawesome-svg-core"
+import { faSearch } from "@fortawesome/free-solid-svg-icons"
 
 const StyledPortfolioSkillsContainer = styled.div`
   display: flex;
@@ -23,6 +26,7 @@ const StyledPortfolioSkillsContainer = styled.div`
 
 const PortfolioSkills = () => {
   const PortfolioSkillsIcons = [
+    <FontAwesomeIcon icon={faSearch as IconProp} />,
     <img src="https://img.icons8.com/ios/50/000000/javascript--v1.png" />,
     <img src="https://img.icons8.com/ios/50/000000/typescript.png" />,
     <img src="https://img.icons8.com/ios/50/000000/css.png" />,
